@@ -1,5 +1,4 @@
 $(document).ready(function($) {
-    "use strict";
     $('#container').pinto({
         itemWidth:230,
         gapX:10,
@@ -7,7 +6,6 @@ $(document).ready(function($) {
         onItemLayout: function($item, column, position) {
         }
     });
-
     function checkScrollDirector(){      //判断滚动条是否滑到底部  
         var flag=0;  
         if($(document).scrollTop()+$(window).height()>=$(document).height()*0.95){  

@@ -15,7 +15,7 @@ $(document).ready(function($) {
         }     
         return flag;           
     }
-   window.onload=function(){
+   window.onload=function(){	//初始化json
     var json={"data":[  
              {"src":"images/01.jpg"},{"src":"images/02.jpg"},{"src":"images/03.jpg"},{"src":"images/04.jpg"},{"src":"images/05.jpg"},  
              {"src":"images/06.jpg"},{"src":"images/07.jpg"},{"src":"images/08.jpg"},{"src":"images/09.jpg"},{"src":"images/10.jpg"},  
@@ -44,4 +44,68 @@ $(document).ready(function($) {
         }  
    	  }  
    }
+   
+   //login
+   var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+	// trick to prevent scrolling when opening/closing button
+	function noScrollFn() {
+		window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+	}
+
+	function noScroll() {
+		window.removeEventListener( 'scroll', scrollHandler );
+		window.addEventListener( 'scroll', noScrollFn );
+	}
+
+	function scrollFn() {
+		window.addEventListener( 'scroll', scrollHandler );
+	}
+
+	function canScroll() {
+		window.removeEventListener( 'scroll', noScrollFn );
+		scrollFn();
+	}
+
+	function scrollHandler() {
+		if( !didScroll ) {
+			didScroll = true;
+			setTimeout( function() { scrollPage(); }, 60 );
+		}
+	};
+
+	function scrollPage() {
+		scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+		didScroll = false;
+	};
+
+	scrollFn();
+
+	[].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+		new UIMorphingButton( bttn, {
+			closeEl : '.icon-close',
+			onBeforeOpen : function() {
+				// don't allow to scroll
+				noScroll();
+			},
+			onAfterOpen : function() {
+				// can scroll again
+				canScroll();
+			},
+			onBeforeClose : function() {
+				// don't allow to scroll
+				noScroll();
+			},
+			onAfterClose : function() {
+				// can scroll again
+				canScroll();
+			}
+		} );
+	} );
+
+	// for demo purposes only
+	[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+		bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+	} );
+	
 });

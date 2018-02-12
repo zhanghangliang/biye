@@ -3,7 +3,6 @@
 	position: fixed;top: 50%;right: -0.6%;margin-top: -23%;z-index: 10001;
 }
 
-
 .morph-button {
 	position: relative;
 	display: block;
@@ -39,7 +38,7 @@
 .morph-button-fixed,
 .morph-button-fixed .morph-content {
 	width: 80px;
-	height: 63px;
+	height: 62px;
 }
 
 .morph-button-fixed > button {
@@ -143,8 +142,8 @@
 .morph-button-modal-2 .morph-content,
 .morph-button-modal-3 > button,
 .morph-button-modal-3 .morph-content {
-	background-color: #fef0e3;
-	color: #e75854;
+	background-color: #C83935;
+	color: #ff;
 }
 
 /* 登录弹出框样式 */
@@ -152,6 +151,7 @@
 	margin: -210px 0 0 -170px;
 	width: 340px;
 	height: 400px;
+	background-color: rgb(250, 255, 189);
 }
 
 /* 注册弹出框样式 */
@@ -159,6 +159,7 @@
 	margin: -255px 0 0 -210px;
 	width: 400px;
 	height: 470px;
+	background-color: rgb(250, 255, 189);
 }
 
 .morph-button-modal-3.open .morph-content > div {

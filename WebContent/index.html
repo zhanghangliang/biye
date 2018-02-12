@@ -21,14 +21,27 @@
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="shortcut icon" href="favicon.ico">
 	
-	<!-- Core JavaScript Files -->  	
-	 
 	<!-- login --> 
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" type="text/css" href="css/content.css" />
 	
+	<!-- 缩放搜索栏 -->
+	<link rel="stylesheet" href="css/sou.css">
+	
 </head>
 <body>
+	
+		<!-- search -->
+	<div id="search_bar" class="search_bar">
+		<form id="myform">
+			<input class="input" placeholder="想搜点什么呢..."
+			type="text" name="key" id="search">
+			<input class="search_btn" type="submit" value="">
+			<span class="search_ico"><i class="fa fa-search"></i></span>
+		</form>
+	</div>
+		<!-- search end -->
+		
 	<div class="header">
 		<div id='cssmenu' >
 			<ul>
@@ -55,7 +68,7 @@
 			</ul>
 		</div>
 		
-					   <!-- login -->
+			   <!-- login -->
 			   <div class="mockup-content" value="1">
 					<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
 						<button type="button">登 录</button>
@@ -534,11 +547,15 @@
 	<!-- Menu -->
 	<script src="js/script.js"></script>
 	
-	<!-- jQuery 登录注册缩放 -->
+	<!-- jQuery 登录注册 -->
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/uiMorphingButton_fixed.js"></script>
 	
+	<!-- 缩放搜索栏 -->
+	<script type="text/javascript" src="js/sou.js" ></script>
+	
+	<!-- text -->
 	<script src="js/before.js"></script>
 </body>
 </html>

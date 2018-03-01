@@ -28,7 +28,7 @@ $(document).ready(function($) {
         	$(".btn-like").off('click');
             for(var i=0;i<json.data.length;i++){ 
                 var html="<div class='item'>" +
-                			"<a class='example-image-link' href="+json.data[i].src+" data-lightbox='example-set' data-title='Click the right half of the image to move forward.'><img class='example-image' src="+json.data[i].src+" alt=''/></a>" +
+                			"<a class='example-image-link' href="+json.data[i].src+" data-lightbox='example-set' data-title='点击图像右半部分向前移动。'><img class='example-image' src="+json.data[i].src+" alt=''/></a>" +
                 			"<div class='content-item'>" +
                 				"<h3 class='title-item'><a href='single.html'>Vintage camera</a></h3>" +
                 				"<div class='time'> SEPTEMBER 30TH</div>" +

@@ -9,11 +9,16 @@ $(document).ready(function($) {
     function checkScrollDirector(){      //判断滚动条是否滑到底部  
         var flag=0;  
         if($(document).scrollTop()+$(window).height()>=$(document).height()*0.95){  
-            flag=1;  
+            flag=1;
         }     
         return flag;           
     }
-   window.onload=function(){	//初始化json
+   window.onload=function(){
+       $('#container').pinto("destroy");
+       $('#container').pinto();
+//	根据用户显示按钮
+	$(".adminDelete").show();
+//	初始化json
     var json={"data":[  
              {"src":"images/01.jpg"},{"src":"images/02.jpg"},{"src":"images/03.jpg"},{"src":"images/04.jpg"},{"src":"images/05.jpg"},  
              {"src":"images/06.jpg"},{"src":"images/07.jpg"},{"src":"images/08.jpg"},{"src":"images/09.jpg"},{"src":"images/10.jpg"},  

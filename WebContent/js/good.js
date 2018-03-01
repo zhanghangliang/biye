@@ -35,19 +35,31 @@ $(function () {
   });
 	//这种把子元素（.btn-like）代理到父元素（#container）的方式，可满足动态元素,动态添加的 button 也是有事件的。
 	$("#container").on('click','.btn-like',function () {
-	    $.tipsBox({
-	      obj: $(this),
-	      str: "<i class='fa fa-heart'></i>+1",
-	      callback: function () {
-	      }
-	    });
-	    var i = parseInt($(this).text().replace(/[^0-9]/ig,""));
-	    i++;
-	    if(i>=100000){
-	    	$(this).text("赞99999+ ");
-	    }else{
-	    	$(this).text("赞 "+i+" ");
-	    }
-	    $(this).append("<i class='fa fa-thumbs-o-up'></i>");
+		goodTime = getCookie('goodTime');
+		if(goodTime<10 ||goodTime == null){
+		    $.tipsBox({
+		      obj: $(this),
+		      str: "<i class='fa fa-heart'></i>+1",
+		      callback: function () {
+		      }
+		    });
+		    var i = parseInt($(this).text().replace(/[^0-9]/ig,""));
+		    i++;
+		    if(i>=100000){
+		    	$(this).text("赞99999+ ");
+		    }else{
+		    	$(this).text("赞 "+i+" ");
+		    }
+		    $(this).append("<i class='fa fa-thumbs-o-up'></i>");
+		    
+		    if(goodTime==null||goodTime==""){
+		    	goodTime = 0;
+		    }
+		    goodTime = parseInt(goodTime)+1;
+		    setCookie('goodTime',goodTime,1);
+		}
+		else{
+			alert("您今日点赞次数已达上限!");
+		}
 	});
 });

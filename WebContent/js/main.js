@@ -18,6 +18,7 @@ $(document).ready(function($) {
        $('#container').pinto();
 //	根据用户显示按钮
 	$(".adminDelete").show();
+	$(".last").hide();
 //	初始化json
     var json={"data":[  
              {"src":"images/01.jpg"},{"src":"images/02.jpg"},{"src":"images/03.jpg"},{"src":"images/04.jpg"},{"src":"images/05.jpg"},  

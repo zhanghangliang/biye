@@ -140,24 +140,6 @@ article h3{padding: 0;}
 #ff .sendButton {border: none;cursor:pointer;background-color: #333;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;;width:100px;color:#ffffff;height: 50px}
 #ff .sendButton:hover {background-color: #000;}
 
-/*  contact照片墙   */
-.cont { position: relative; width:auto; height:auto; margin:0px auto;}
-.wall {text-align: center;height:auto}
-#ff img { position: relative;cursor: pointer;
- padding:5px 5px 15px; background-color: #fff; border:1px solid #ddd;
- transition:0.5s; box-shadow: 3px 3px 3px #ccc;
- }
- .img1 {left:-10px;transform:rotate(30deg); z-index: 1;}
- .img2 {left:10px;:rotate(-10deg); z-index: 1;}
- .img3 {top:-30px;transform:rotate(20deg); z-index: 1;}
- .img4 {transform:rotate(-30deg); z-index: 1;}
- .img5 {top:-45px;transform:rotate(0deg); z-index: 1;}
- .img6 {left:-10px;transform:rotate(30deg); z-index: 1;}
- .img7 {left:10px;transform:rotate(-40deg); z-index: 1;}
-#ff img:hover { transform:rotate(0deg); transform:scale(1.5); box-shadow: 6px 6px 6px #656565; z-index: 2;}
- 
- 
- 
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Btn------------------------------------ */
 /* ---------------------------------------------------------------------------- */

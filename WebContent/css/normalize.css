@@ -42,7 +42,6 @@ a:hover, a:focus {
 }
 
 
-
 /* 个人中心二设     ! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
 	font-family: sans-serif;
@@ -150,6 +149,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 input {
 	line-height: normal
+	border: 1px solid #ccc; 
+    padding: 4px 0px;
+    border-radius: 2px;
+    padding-left:3px; 
+
 }
 input[type="checkbox"], input[type="radio"] {
 	-webkit-box-sizing: border-box;

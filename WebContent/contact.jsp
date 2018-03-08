@@ -1,5 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+	String li = new String("掌握hex");
+	request.setAttribute("lil", li);
+%>
 <!doctype html>
 <html lang="zh">
 <head>
@@ -20,7 +24,7 @@
 			   <li class="active"><a href='index.jsp'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
 			   <li class=' has-sub'><a href="#"><span>Category</span></a>
 				  <ul>
-					 <li class='has-sub'><a href="#"><span>掌握</span></a>
+					 <li class='has-sub'><a href="#"><span>${lil}</span></a>
 						<ul>
 						   <li><a href="#"><span>Sub Item</span></a></li>
 						   <li class='last'><a href="#"><span>Sub Item</span></a></li>
@@ -60,7 +64,7 @@
 			</g>
 		  </svg>
 		</div>
-		照片墙
+		照片墙预览
 	  </li>
 	  <li class="wrap">
 		<div class="icon">
@@ -70,7 +74,7 @@
 			</g>
 		  </svg>
 		</div>
-		信息修改
+		信息完善
 	  </li>
 	  <li class="ship">
 		<div class="icon">

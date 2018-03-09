@@ -365,4 +365,7 @@
     right: 20px;
     top: 26px;
   }
+  #personal {
+  	display:none;
+  }
 }

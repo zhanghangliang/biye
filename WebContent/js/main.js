@@ -11,20 +11,23 @@ $(document).ready(function($) {
         if($(document).scrollTop()+$(window).height()>=$(document).height()*0.95){  
             flag=1;
         }     
-        return flag;           
+        return flag;
     }
    window.onload=function(){
-       $('#container').pinto("destroy");
-       $('#container').pinto();
-//	根据用户显示按钮
-	$(".adminDelete").show();
-	$(".last").hide();
+//		根据用户显示按钮,登录注册(标签内hidden="hidden")
+		$(".adminDelete").show();
+		$(".mockup-content").show();
+		
+//		二次布局
+		$('#container').pinto("destroy");
+		$('#container').pinto();
+		
 //	初始化json
     var json={"data":[  
              {"src":"images/01.jpg"},{"src":"images/02.jpg"},{"src":"images/03.jpg"},{"src":"images/04.jpg"},{"src":"images/05.jpg"},  
              {"src":"images/06.jpg"},{"src":"images/07.jpg"},{"src":"images/08.jpg"},{"src":"images/09.jpg"},{"src":"images/10.jpg"},  
              {"src":"images/11.jpg"},{"src":"images/12.jpg"}]};
-   window.onscroll=function(){           //滚动条滚动执行  
+   window.onscroll=function(){           //滚动条滚动执行 
         if(checkScrollDirector()){
         	$(".btn-like").off('click');
             for(var i=0;i<json.data.length;i++){ 

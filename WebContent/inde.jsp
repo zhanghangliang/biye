@@ -72,14 +72,14 @@
 					 </li>
 				  </ul>
 			   </li>
-			   <li><a href="#"><span>Gallery</span></a></li>
-			   <li><a href='single.jsp'><span>About</span></a></li>
-			   <li class='last'><a href='contact.jsp'><span>个人中心</span></a></li>
+			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
+			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
+			   <li><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 		
 			   <!-- login -->
-			   <div class="mockup-content" value="1">
+			   <div class="mockup-content" value="1" hidden="hidden">
 					<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
 						<button type="button">登 录</button>
 						<div class="morph-content">
@@ -104,9 +104,9 @@
 									<span class="icon icon-close">Close the dialog</span>
 									<h2 style="font-size:40px;font-weight:bold;" >注&nbsp&nbsp&nbsp&nbsp册</i></h2>
 									<form>
-										<p><label>用户名</label><input type="text" /></p>
-										<p><label>密码</label><input type="password" /></p>
-										<p><label>再次输入密码</label><input type="password" /></p>
+										<p><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="15" placeholder="请输入账号"/></p>
+										<p><label>密码</label><input name="lspasswd" type="password" placeholder="请输入密码"/></p>
+										<p><label>再次输入密码</label><input type="password" placeholder="请再次输入密码"/></p>
 										<p><button>点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
 									</form>
 								</div>
@@ -560,10 +560,13 @@
 	<script type="text/javascript" src="js/sou.js" ></script>
 	
 	<!-- text -->
-	<script src="js/before.js"></script>
+	<script type="text/javascript" src="js/before.js"></script>
 	
 	<!-- admin Del -->
-	<script src="js/adminDel.js"></script>
+	<script type="text/javascript" src="js/adminDel.js"></script>
+	
+	<!-- logincheck -->
+	<script type="text/javascript" src="js/logincheck/logincheck.js" ></script>
 	
 </body>
 </html>

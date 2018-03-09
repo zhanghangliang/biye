@@ -49,9 +49,9 @@
 					 </li>
 				  </ul>
 			   </li>
-			   <li><a href='#'><span>Gallery</span></a></li>
-			   <li><a href='single.jsp'><span>About</span></a></li>
-			   <li class='last'><a href='contact.jsp'><span>个人中心</span></a></li>
+			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
+			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
+			   <li class='last'><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 	</div>

@@ -38,52 +38,24 @@
 					 </li>
 				  </ul>
 			   </li>
-			   <li><a href="#"><span>Gallery</span></a></li>
-			   <li><a href='single.jsp'><span>About</span></a></li>
-			   <li class='last'><a href='contact.jsp'><span>个人中心</span></a></li>
+			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
+			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
+			   <li class='last'><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 <div id="wrapper">
   <div id="left-side">
 	<ul>
 	  <li class="choose active">
-		<div class="icon active">
-		  <svg viewBox="0 0 32 32">
-			<g filter="">
-			  <use xlink:href="#shopping-cart"></use>
-			</g>
-		  </svg>
-		</div>
 		个人资料
 	  </li>
 	  <li class="pay">
-		<div class="icon">
-		  <svg viewBox="0 0 32 32">
-			<g filter="">
-			  <use xlink:href="#credit-card"></use>
-			</g>
-		  </svg>
-		</div>
 		照片墙预览
 	  </li>
 	  <li class="wrap">
-		<div class="icon">
-		  <svg viewBox="0 0 32 32">
-			<g filter="">
-			  <use xlink:href="#gift"></use>
-			</g>
-		  </svg>
-		</div>
 		信息完善
 	  </li>
 	  <li class="ship">
-		<div class="icon">
-		  <svg viewBox="0 0 32 32">
-			<g filter="">
-			  <use xlink:href="#package"></use>
-			</g>
-		  </svg>
-		</div>
 		个性展示
 	  </li>
 	</ul>
@@ -126,24 +98,24 @@
 	
 	<div id="third">
 		<div id="testleft">
-			<span class='baseInf'>昵称
+			<span class='baseInf'>昵称&nbsp&nbsp
 				<input type="text" value="" name="cutename" placeholder="昵称限8字以内" required>
 			</span>
 			<br>
 			<br>
 			<div style='height:7px'></div>
-			<span class='baseInf'>性别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class='baseInf'>性别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 				<tr><td>
-					<input class="sex" type="radio" name="sex" value="1" required>男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input class="sex" type="radio" name="sex" value="1" required>男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<input class="sex" type="radio" name="sex" value="1">女
 				</td></tr>
 			</span>
 		</div>
 		<div id="testright">
-			<span>邮箱<input type="email" value="" name="email" placeholder="请输入有效的邮箱地址" required></span>
+			<span>邮箱&nbsp&nbsp<input type="email" value="" name="email" placeholder="请输入有效的邮箱地址" required></span>
 			<br>
 			<br>
-			<span>年龄<input type="age" value="" name="age" required></span>
+			<span>年龄&nbsp&nbsp<input type="age" value="" name="age" required></span>
 		</div>
 	</div>
 	

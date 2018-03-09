@@ -4,7 +4,7 @@ $(function() {
 		var keys = $("#search").val();
 		if (keys.length > 2) {
 			$("#search").val('');
-			$("#myform").submit();
+			window.location.href="index1?search="+keys;
 		} else {
 			return false;
 		}

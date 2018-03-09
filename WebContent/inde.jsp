@@ -44,8 +44,8 @@
 		<!-- search -->
 	<div id="search_bar" class="search_bar">
 		<form id="myform">
-			<input class="input" placeholder="想搜点什么呢..."
-			type="text" name="key" id="search">
+			<input class="input" placeholder=${searchtype}
+			type="text" name="searchtype" id="search" maxlength="10">
 			<input class="search_btn" type="submit" value="">
 			<span class="search_ico"><i class="fa fa-search"></i></span>
 		</form>

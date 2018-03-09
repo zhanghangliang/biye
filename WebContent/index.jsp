@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <jsp:forward page="/index"/>
+  <jsp:forward page="/index1?search=all"/>
   </body>
 </html>

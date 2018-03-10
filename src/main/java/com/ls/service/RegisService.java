@@ -5,5 +5,5 @@ public interface RegisService {
 	public int checkAccount(String account);
 	
 	//将新用户信息插入数据库
-	public void regis(String account,String pwd);
+	public Integer regis(String account,String pwd);
 }

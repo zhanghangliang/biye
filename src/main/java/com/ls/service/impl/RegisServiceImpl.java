@@ -31,9 +31,13 @@ public class RegisServiceImpl implements RegisService{
 
 	@Override
 	@Transactional
-	public void regis(String account, String pwd) {
+	public Integer regis(String account, String pwd) {
 		userBaseInfo.setAccount(account);
 		userBaseInfo.setPasswd(pwd);
+		userBaseInfo.setUserId(null);
 		mapper.insert(userBaseInfo);
+		System.out.println(userBaseInfo.getUserId());
+		return userBaseInfo.getUserId();
 	}
+	
 }

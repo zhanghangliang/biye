@@ -27,10 +27,10 @@ public class LoginServiceImpl implements LoginService{
 		List<UserBaseInfo> result = mapper.selectByExample(example);
 		example.clear();
 		if (!result.isEmpty()) {
-			if (result.get(0).getType()==1) {
-				return "success2";
+			if (result.get(0).getType()!=null) {
+				return result.get(0).getUserId()+"_success2";
 			}
-			return "success1";
+			return result.get(0).getUserId()+"_success1";
 		} else return "error";
 	}
 }

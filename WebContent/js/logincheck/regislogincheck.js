@@ -32,9 +32,11 @@ function overcheck(){
 			alert("账号不符合规范");
 			accountcheck();
 		} else {
-			setCookie('loginUser',data,1);
+			var words = data.split("_");
+			setCookie('loginUserid',words[0],1);
+			setCookie('loginUser',words[1],1);
 			setCookie('loginType','normal',1);
-			alert("注册成功,点击返回首页");
+			alert("账户："+words[1]+"  注册成功,点击返回首页");
 			window.location.href="index1?search=all";
 		}
 	})
@@ -74,12 +76,16 @@ function acpwdcheck(){
 			loginac:$("#loginac").val(),
 			loginpwd:$("#loginpwd").val()
 		}, function(data){
-			if(data=="success1"){
+			var words = data.split("_");
+			if(words[1]=="success1"){
+				alert("success1");
+				setCookie('loginUserid',words[0],1);
 				setCookie('loginUser',$("#loginac").val(),1);
 				setCookie('loginType','normal',1);
-				alert("账号"+$("#loginac").val()+"登录成功,点击返回首页");
+				alert("账户："+$("#loginac").val()+"  登录成功,点击返回首页");
 				window.location.href="index1?search=all";
-			}else if(data=="success2"){
+			}else if(words[1]=="success2"){
+				setCookie('loginUserid',words[0],1);
 				setCookie('loginUser',$("#loginac").val(),1);
 				setCookie('loginType','senior',1);
 				alert("你好管理员："+$("#loginac").val());

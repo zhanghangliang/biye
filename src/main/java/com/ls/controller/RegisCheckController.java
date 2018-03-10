@@ -31,8 +31,8 @@ public class RegisCheckController {
 			@RequestParam("repwd") String repwd) {
 		if (lsaccount.length() >= 5 && lsaccount.length() < 13&&regisServiceImpl.checkAccount(lsaccount)==0){
 			if(lspwd.equals(repwd)&&lspwd.length()>5&&lspwd.length()<15){
-				regisServiceImpl.regis(lsaccount, lspwd);
-				return lsaccount;
+				Integer regis = regisServiceImpl.regis(lsaccount, lspwd);
+				return regis.toString()+"_"+lsaccount;
 			}
 			return "pwd";
 		}

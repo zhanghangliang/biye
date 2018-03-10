@@ -107,7 +107,7 @@
 									<h2 style="font-size:40px;font-weight:bold;" >注&nbsp&nbsp&nbsp&nbsp册</i></h2>
 									<form>
 										<p><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="13" placeholder="请输入5-13位账号"/></p>
-										<p><label>密码</label><input id="lspwd" name="lspasswd" type="password" maxlength="15" placeholder="请输入5-15位密码"/></p>
+										<p><label>密码</label><input id="lspwd" name="lspasswd" type="password" maxlength="15" placeholder="请输入6-15位密码"/></p>
 										<p><label>再次输入密码</label><input id="repwd" type="password" maxlength="15" placeholder="请再次输入密码"/></p>
 										<p><button id="newregis" type="button" >点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
 									</form>

@@ -99,7 +99,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ls.entity.UserBaseInfo" >
+  <insert id="insert" useGeneratedKeys="true" keyProperty="userId" parameterType="com.ls.entity.UserBaseInfo" >
     insert into user_base_info (user_id, account, passwd, 
       lift_ban_time, type)
     values (#{userId,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{passwd,jdbcType=VARCHAR}, 

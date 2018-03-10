@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.ExperienceReply;
 import com.ls.entity.ExperienceReplyExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ExperienceReplyMapper {
     int countByExample(ExperienceReplyExample example);
 

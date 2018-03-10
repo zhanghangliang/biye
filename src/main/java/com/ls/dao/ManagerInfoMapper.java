@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.ManagerInfo;
 import com.ls.entity.ManagerInfoExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ManagerInfoMapper {
     int countByExample(ManagerInfoExample example);
 

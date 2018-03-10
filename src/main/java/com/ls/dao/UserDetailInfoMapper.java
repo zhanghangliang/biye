@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.UserDetailInfo;
 import com.ls.entity.UserDetailInfoExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserDetailInfoMapper {
     int countByExample(UserDetailInfoExample example);
 

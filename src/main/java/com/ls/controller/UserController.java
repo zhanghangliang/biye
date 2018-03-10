@@ -1,7 +1,7 @@
 package com.ls.controller;
 
 import com.ls.entity.User;
-import com.ls.service.UserSercice;
+import com.ls.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/test")
 public class UserController {
 	@Autowired
-    UserSercice userService;
+    UserService userService;
 
     @RequestMapping("/list")
     public ModelAndView list()

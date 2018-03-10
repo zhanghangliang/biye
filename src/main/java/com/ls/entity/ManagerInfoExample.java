@@ -3,6 +3,9 @@ package com.ls.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ManagerInfoExample {
     protected String orderByClause;
 

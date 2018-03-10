@@ -35,6 +35,9 @@
 	<!-- jQuery 瀑布流 -->
 	<script type="text/javascript" src="js/jquery.pinto.js"></script>
 	
+    <!-- cookies 操作 -->
+    <script type="text/javascript" src="js/cookie.js"></script>
+	
 	<!-- jQuery 主控js：无限下拉 -->
 	<script type="text/javascript" src="js/main.js"></script>
 	
@@ -44,7 +47,7 @@
 		<!-- search -->
 	<div id="search_bar" class="search_bar">
 		<form id="myform">
-			<input class="input" placeholder=${searchtype}
+			<input class="input" placeholder=${searchtype} 
 			type="text" name="searchtype" id="search" maxlength="10">
 			<input class="search_btn" type="submit" value="">
 			<span class="search_ico"><i class="fa fa-search"></i></span>
@@ -74,7 +77,6 @@
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
 			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
-			   <li><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 		
@@ -104,10 +106,10 @@
 									<span class="icon icon-close">Close the dialog</span>
 									<h2 style="font-size:40px;font-weight:bold;" >注&nbsp&nbsp&nbsp&nbsp册</i></h2>
 									<form>
-										<p><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="15" placeholder="请输入账号"/></p>
-										<p><label>密码</label><input name="lspasswd" type="password" placeholder="请输入密码"/></p>
-										<p><label>再次输入密码</label><input type="password" placeholder="请再次输入密码"/></p>
-										<p><button>点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
+										<p><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="13" placeholder="请输入5-13位账号"/></p>
+										<p><label>密码</label><input id="lspwd" name="lspasswd" type="password" maxlength="15" placeholder="请输入5-15位密码"/></p>
+										<p><label>再次输入密码</label><input id="repwd" type="password" maxlength="15" placeholder="请再次输入密码"/></p>
+										<p><button id="newregis" type="button" >点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
 									</form>
 								</div>
 							</div>
@@ -545,9 +547,6 @@
 	<!-- Light Box -->
 	<script src="js/lightbox-plus-jquery.min.js"></script>
 	
-    <!-- cookies 操作 -->
-    <script type="text/javascript" src="js/cookie.js"></script>
-	
 	<!-- Menu -->
 	<script src="js/script.js"></script>
 	
@@ -565,8 +564,8 @@
 	<!-- admin Del -->
 	<script type="text/javascript" src="js/adminDel.js"></script>
 	
-	<!-- logincheck -->
-	<script type="text/javascript" src="js/logincheck/logincheck.js" ></script>
+	<!-- regis check -->
+	<script type="text/javascript" src="js/logincheck/regischeck.js" ></script>
 	
 </body>
 </html>

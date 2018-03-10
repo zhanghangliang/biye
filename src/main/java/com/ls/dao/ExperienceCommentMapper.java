@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.ExperienceComment;
 import com.ls.entity.ExperienceCommentExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ExperienceCommentMapper {
     int countByExample(ExperienceCommentExample example);
 

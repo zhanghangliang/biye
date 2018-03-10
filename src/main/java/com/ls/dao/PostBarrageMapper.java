@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.PostBarrage;
 import com.ls.entity.PostBarrageExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PostBarrageMapper {
     int countByExample(PostBarrageExample example);
 

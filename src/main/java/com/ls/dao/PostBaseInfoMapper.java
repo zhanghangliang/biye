@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.PostBaseInfo;
 import com.ls.entity.PostBaseInfoExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PostBaseInfoMapper {
     int countByExample(PostBaseInfoExample example);
 

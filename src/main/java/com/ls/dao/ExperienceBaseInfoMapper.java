@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.ExperienceBaseInfo;
 import com.ls.entity.ExperienceBaseInfoExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ExperienceBaseInfoMapper {
     int countByExample(ExperienceBaseInfoExample example);
 

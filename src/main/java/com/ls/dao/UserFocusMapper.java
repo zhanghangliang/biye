@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.UserFocus;
 import com.ls.entity.UserFocusExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserFocusMapper {
     int countByExample(UserFocusExample example);
 

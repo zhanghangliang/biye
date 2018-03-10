@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.UserBaseInfo;
 import com.ls.entity.UserBaseInfoExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserBaseInfoMapper {
     int countByExample(UserBaseInfoExample example);
 

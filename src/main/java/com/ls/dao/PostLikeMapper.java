@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.PostLike;
 import com.ls.entity.PostLikeExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PostLikeMapper {
     int countByExample(PostLikeExample example);
 

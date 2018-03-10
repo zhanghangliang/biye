@@ -2,9 +2,12 @@ package com.ls.dao;
 
 import com.ls.entity.SystemConf;
 import com.ls.entity.SystemConfExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SystemConfMapper {
     int countByExample(SystemConfExample example);
 

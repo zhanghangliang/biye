@@ -16,8 +16,11 @@ $(document).ready(function($) {
    window.onload=function(){
 //		根据用户显示按钮,登录注册(标签内hidden="hidden")
 		$(".adminDelete").show();
-		$(".mockup-content").show();
-		
+		if(getCookie('loginType')==null||getCookie('loginType')==""){
+			$(".mockup-content").show();
+		} else{
+			$("#cssmenu").children().append("<li><a href='contact.jsp'><span>| 个人中心 |</span></a></li>");
+		}
 //		二次布局
 		$('#container').pinto("destroy");
 		$('#container').pinto();
@@ -110,9 +113,9 @@ $(document).ready(function($) {
 		} );
 	} );
 
-	// for demo purposes only
-	[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
-		bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-	} );
+//	// for demo purposes only
+//	[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+//		bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+//	} );
 	
 });

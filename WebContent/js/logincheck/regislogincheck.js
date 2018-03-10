@@ -1,3 +1,4 @@
+//注册
 $("#zhuceaccount").change(function() {
 	accountcheck();
 });
@@ -11,8 +12,13 @@ $("#newregis").click(function(){
 	overcheck();
 });
 
+//登录
+$("#login").click(function(){
+	acpwdcheck();
+})
 
 
+//注册
 function overcheck(){
 	$.post("/regischeck/allcheck", {
 		lsaccount : $("#zhuceaccount").val(),
@@ -27,7 +33,7 @@ function overcheck(){
 			accountcheck();
 		} else {
 			setCookie('loginUser',data,1);
-			setCookie('loginType','travel',1);
+			setCookie('loginType','normal',1);
 			alert("注册成功,点击返回首页");
 			window.location.href="index1?search=all";
 		}
@@ -35,7 +41,8 @@ function overcheck(){
 }
 function accountcheck(){
 	$("#equalA").remove();
-	$.post("/regischeck/accheck", {
+	$.post("/regischeck/accheck", 
+	{
 		lsaccount : $("#zhuceaccount").val()
 	}, function(data,status) {
 		if (data == "success") {
@@ -57,4 +64,28 @@ function pwdcheck(){
 		$('#repwd').css("width","92%");
 		$('#repwd').parent().append('<i id="equalB" class="fa fa-times-circle-o" style="color: #ff0000;font-size:24px;padding-left:5px"></i>');
 	}
+}
+
+
+//登录
+function acpwdcheck(){
+	$.post("/logincheck",
+		{
+			loginac:$("#loginac").val(),
+			loginpwd:$("#loginpwd").val()
+		}, function(data){
+			if(data=="success1"){
+				setCookie('loginUser',$("#loginac").val(),1);
+				setCookie('loginType','normal',1);
+				alert("账号"+$("#loginac").val()+"登录成功,点击返回首页");
+				window.location.href="index1?search=all";
+			}else if(data=="success2"){
+				setCookie('loginUser',$("#loginac").val(),1);
+				setCookie('loginType','senior',1);
+				alert("你好管理员："+$("#loginac").val());
+				window.location.href="index1?search=all";
+			}else {
+				alert("用户名密码错误");
+			}
+		})
 }

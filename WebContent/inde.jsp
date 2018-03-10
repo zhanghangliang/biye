@@ -90,9 +90,9 @@
 									<span class="icon icon-close">Close the dialog</span>
 									<h2 style="font-size:40px;font-weight:bold;">登&nbsp&nbsp&nbsp&nbsp录</h2>
 									<form>
-										<p><label>用户名</label><input type="text" /></p>
-										<p><label>密码</label><input type="password" /></p>
-										<p><button id="login">点&nbsp&nbsp击&nbsp&nbsp登&nbsp&nbsp录</button></p>
+										<p><label>用户名</label><input id="loginac" type="text" /></p>
+										<p><label>密码</label><input id="loginpwd" type="password" /></p>
+										<p><button type="button" id="login">点&nbsp&nbsp击&nbsp&nbsp登&nbsp&nbsp录</button></p>
 									</form>
 								</div>
 							</div>
@@ -558,14 +558,11 @@
 	<!-- 缩放搜索栏 -->
 	<script type="text/javascript" src="js/sou.js" ></script>
 	
-	<!-- text -->
-	<script type="text/javascript" src="js/before.js"></script>
-	
 	<!-- admin Del -->
 	<script type="text/javascript" src="js/adminDel.js"></script>
 	
 	<!-- regis check -->
-	<script type="text/javascript" src="js/logincheck/regischeck.js" ></script>
+	<script type="text/javascript" src="js/logincheck/regislogincheck.js" ></script>
 	
 </body>
 </html>

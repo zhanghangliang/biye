@@ -15,7 +15,9 @@ $(document).ready(function($) {
     }
    window.onload=function(){
 //		根据用户显示按钮,登录注册(标签内hidden="hidden")
-		$(".adminDelete").show();
+	    if(getCookie('loginType')=="senior"){
+	    	$(".adminDelete").show();
+	    }
 		if(getCookie('loginType')==null||getCookie('loginType')==""){
 			$(".mockup-content").show();
 		} else{

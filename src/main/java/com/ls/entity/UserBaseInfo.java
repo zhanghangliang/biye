@@ -14,6 +14,8 @@ public class UserBaseInfo {
 
     private Date liftBanTime;
 
+    private Integer type;
+
     public Integer getUserId() {
         return userId;
     }
@@ -44,5 +46,13 @@ public class UserBaseInfo {
 
     public void setLiftBanTime(Date liftBanTime) {
         this.liftBanTime = liftBanTime;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

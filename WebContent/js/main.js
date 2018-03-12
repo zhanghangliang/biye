@@ -14,6 +14,7 @@ $(document).ready(function($) {
         return flag;
     }
    window.onload=function(){
+//		根据情况提示信息（1.系统设置中的公告  2.拦截器拦截后提示登录）
 //		根据用户显示按钮,登录注册(标签内hidden="hidden")
 	    if(getCookie('loginType')=="senior"){
 	    	$(".adminDelete").show();
@@ -21,7 +22,7 @@ $(document).ready(function($) {
 		if(getCookie('loginType')==null||getCookie('loginType')==""){
 			$(".mockup-content").show();
 		} else{
-			$("#cssmenu").children().append("<li><a href='contact.jsp'><span>| 个人中心 |</span></a></li>");
+			$("#cssmenu").children().append("<li><a href='/contact'><span>| 个人中心 |</span></a></li>");
 		}
 //		二次布局
 		$('#container').pinto("destroy");
@@ -39,14 +40,14 @@ $(document).ready(function($) {
                 var html="<div class='item'>" +
                 			"<a class='example-image-link' href="+json.data[i].src+" data-lightbox='example-set' data-title='点击图像右半部分向前移动。'><img class='example-image' src="+json.data[i].src+" alt=''/></a>" +
                 			"<div class='content-item'>" +
-                				"<h3 class='title-item'><a href='single.html'>Vintage camera</a></h3>" +
+                				"<h3 class='title-item'><a href='/single'>Vintage camera</a></h3>" +
                 				"<div class='time'> SEPTEMBER 30TH</div>" +
                 				"<p class='info'>Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus.</p>" +
                 			"</div>" +
                 			"<div class='bottom-item'>" +
                 				"<span class='btn btn-like'>赞999 <i class='fa fa-thumbs-o-up'></i></span>" +
                 				"<a href='#' class='btn btn-comment'><i class='fa fa-comment-o'></i></a>" +
-                				"<a href='single.html' class='btn btn-more'><i class='fa fa-long-arrow-right '></i></a>" +
+                				"<a href='/single' class='btn btn-more'><i class='fa fa-long-arrow-right '></i></a>" +
                 			"</div>" +
                 		 "</div>"; 
                 $("#container").append(html);                       //向容器内一次性添加12个图片

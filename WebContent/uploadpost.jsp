@@ -31,8 +31,8 @@
 				  </ul>
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
-			   <li class='last'><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
+			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
+			   <li class='last'><a href='/jsp'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -52,7 +52,7 @@
 				</div>
 			</label>
 			<label>
-				<br><span>图片简介</span>
+				<br><span>图片简介:</span>
 				<textarea id="message" name="message" placeholder="最大字数不超过500字" maxlength="500"></textarea> 
 			</label>
 			<center>

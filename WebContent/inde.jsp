@@ -20,7 +20,6 @@
 	
 	<!-- Icon -->
 	<link rel="shortcut icon" href="images/favicon.ico" />
-	<link rel="shortcut icon" href="favicon.ico">
 	
 	<!-- login --> 
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -76,7 +75,7 @@
 				  </ul>
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
+			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
 			</ul>
 		</div>
 		
@@ -124,7 +123,7 @@
 			<div class="item">
 				<a class="example-image-link" href="images/25.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/25.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Children</a></h3>
+					<h3 class="title-item"><a href="/single">Children</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -132,13 +131,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞99999+ <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/27.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/27.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Startup</a></h3>
+					<h3 class="title-item"><a href="/single">Startup</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -146,13 +145,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/28.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/28.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Sun</a></h3>
+					<h3 class="title-item"><a href="/single">Sun</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -160,13 +159,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/29.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/29.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">The Eiffel Tower</a></h3>
+					<h3 class="title-item"><a href="/single">The Eiffel Tower</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -174,13 +173,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/30.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/30.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Water drops</a></h3>
+					<h3 class="title-item"><a href="/single">Water drops</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -188,13 +187,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/01.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/01.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Agfa</a></h3>
+					<h3 class="title-item"><a href="/single">Agfa</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 					
@@ -202,52 +201,52 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/02.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/02.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Auto</a></h3>
+					<h3 class="title-item"><a href="/single">Auto</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 				</div>
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/03.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/03.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Bald eagle</a></h3>
+					<h3 class="title-item"><a href="/single">Bald eagle</a></h3>
 					<span class="time">SEPTEMBER 30TH</span>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 				</div>
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/04.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/04.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Black swan</a></h3>
+					<h3 class="title-item"><a href="/single">Black swan</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit. Vestibulum e risu.</p>
 				</div>
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/05.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/05.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Book shelf</a></h3>
+					<h3 class="title-item"><a href="/single">Book shelf</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risu.</p>
 					
@@ -255,13 +254,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/06.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/06.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Camera</a></h3>
+					<h3 class="title-item"><a href="/single">Camera</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risu.Aenean feugiat in ante et blandit. Vestibulum e risu.</p>
 					
@@ -269,13 +268,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/07.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/07.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Camera</a></h3>
+					<h3 class="title-item"><a href="/single">Camera</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risu.</p>
 					
@@ -283,13 +282,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/08.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/08.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Vintage camera</a></h3>
+					<h3 class="title-item"><a href="/single">Vintage camera</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus.</p>
 					
@@ -297,13 +296,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/09.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/09.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Coffee</a></h3>
+					<h3 class="title-item"><a href="/single">Coffee</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 					
@@ -311,13 +310,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/10.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/10.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Cookies</a></h3>
+					<h3 class="title-item"><a href="/single">Cookies</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 					
@@ -325,13 +324,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/12.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/12.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">DJ</a></h3>
+					<h3 class="title-item"><a href="/single">DJ</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit. Vestibulum e risu.</p>
 					
@@ -339,13 +338,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/11.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/11.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Cubes</a></h3>
+					<h3 class="title-item"><a href="/single">Cubes</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit. Vestibulum e risu.</p>
 					
@@ -353,13 +352,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/13.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/13.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Doors</a></h3>
+					<h3 class="title-item"><a href="/single">Doors</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.</p>
 					
@@ -367,13 +366,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/14.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/14.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Matchbox</a></h3>
+					<h3 class="title-item"><a href="/single">Matchbox</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -381,13 +380,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/15.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/15.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Freiburg</a></h3>
+					<h3 class="title-item"><a href="/single">Freiburg</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit.</p>
 					
@@ -395,13 +394,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/16.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/16.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Henna</a></h3>
+					<h3 class="title-item"><a href="/single">Henna</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. nte et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -409,13 +408,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/17.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/17.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Home office</a></h3>
+					<h3 class="title-item"><a href="/single">Home office</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -423,13 +422,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/18.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/18.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">iPad</a></h3>
+					<h3 class="title-item"><a href="/single">iPad</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean fenean feugiat in ante et blandit.</p>
 					
@@ -437,13 +436,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/19.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/19.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Matchbox</a></h3>
+					<h3 class="title-item"><a href="/single">Matchbox</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac i, Vestibulum e risu. Aenean feugiat in ante et blandit.Vestibulum e risu. Aenean feugiat in ante et blandit.Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -451,13 +450,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/20.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/20.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Lynx</a></h3>
+					<h3 class="title-item"><a href="/single">Lynx</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -465,13 +464,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/21.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/21.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Mac</a></h3>
+					<h3 class="title-item"><a href="/single">Mac</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -479,13 +478,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/22.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/22.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Notebook</a></h3>
+					<h3 class="title-item"><a href="/single">Notebook</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -493,13 +492,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/23.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/23.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Thoughts</a></h3>
+					<h3 class="title-item"><a href="/single">Thoughts</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -507,13 +506,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/24.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/24.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Office</a></h3>
+					<h3 class="title-item"><a href="/single">Office</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -521,13 +520,13 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 			<div class="item">
 				<a class="example-image-link" href="images/26.jpg" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="images/26.jpg" alt="#"/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="single.jsp">Portrait</a></h3>
+					<h3 class="title-item"><a href="/single">Portrait</a></h3>
 					<div class="time"> SEPTEMBER 30TH<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.Aenean feugiat in ante et blandit, Vestibulum e risu. Aenean feugiat in ante et blandit.</p>
 					
@@ -535,7 +534,7 @@
 				<div class="bottom-item">
 					<span class='btn btn-like'>赞10 <i class='fa fa-thumbs-o-up'></i></span>
 					<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
-					<a href="single.jsp" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
+					<a href="/single" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 				</div>
 			</div>
 		</div>

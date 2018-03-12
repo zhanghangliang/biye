@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class testController {
+public class NewPostController {
 	@RequestMapping("/newpost")
     public ModelAndView list()
     {

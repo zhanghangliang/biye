@@ -32,7 +32,7 @@
 	<div class="header">
 		<div id='cssmenu' >
 			<ul>
-			   <li class="active"><a href='index.jsp'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
+			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
 			   <li class=' has-sub'><a href='#'><span>Category</span></a>
 				  <ul>
 					 <li class='has-sub'><a href='#'><span>Item 1</span></a>
@@ -50,8 +50,8 @@
 				  </ul>
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='single.jsp'><span>| 摄影经验分享 |</span></a></li>
-			   <li class='last'><a href='contact.jsp'><span>| 个人中心 |</span></a></li>
+			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
+			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 	</div>

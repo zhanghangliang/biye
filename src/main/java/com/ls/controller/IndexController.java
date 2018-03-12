@@ -14,7 +14,9 @@ public class IndexController {
     {
         ModelAndView mv=new ModelAndView();
         if ("all".equals(content)) {
-			content = "想搜点什么呢....";
+        	content = "想搜点什么呢....";
+		} else {
+			content = "当前搜索："+content;
 		}
         mv.addObject("searchtype", content);
         mv.setViewName("/inde");

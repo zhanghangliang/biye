@@ -1,5 +1,8 @@
 package com.ls.entity;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class PostLike {
     private Integer postId;
 

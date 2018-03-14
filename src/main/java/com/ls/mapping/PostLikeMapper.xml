@@ -87,7 +87,7 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ls.entity.PostLike" >
-    insert into post_like (post_id, like)
+    insert into post_like (post_id, `like`)
     values (#{postId,jdbcType=INTEGER}, #{like,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.ls.entity.PostLike" >

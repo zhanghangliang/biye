@@ -2,6 +2,9 @@ package com.ls.entity;
 
 import java.util.Date;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ExperienceReply {
     private Integer replyId;
 

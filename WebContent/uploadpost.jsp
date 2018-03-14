@@ -32,11 +32,11 @@
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
 			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
-			   <li class='last'><a href='/jsp'><span>| 个人中心 |</span></a></li>
+			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
 	</div>
-		<form action="" method="post" class="smart-green">
+		<form action="/checkpost" method="post" class="smart-green" enctype="multipart/form-data" onsubmit="return check();">
 			<h1>摄影作品上传<span>与同一个世界 · 分享 · 不一样的美好</span></h1>
 			<label> 
 				<br><span>作品标题:</span>
@@ -48,7 +48,7 @@
 				<label><label id="filelabel" for="file"><span id="postimg">点击此处上传</span></label><br><br></label>
 				<input type="file" accept="image/*" id="file" name="postimg" style="display: none"/>
 				<div id="image1" style="width:auto;height:auto; background:#CCCCCC;" hidden="hidden">
-				    <center><img src="images/2.jpg" height="auto" width="auto" border="5px"/></center>
+				    <center><img id="showspan" height="auto" width="auto" border="5px"/></center>
 				</div>
 			</label>
 			<label>
@@ -58,7 +58,8 @@
 			<center>
 				<label>
 					<br><span>&nbsp;</span>
-					<input type="button" class="button" value="Send" />
+					
+					<input type="submit">
 				</label>
 			</center>
 		</form>

@@ -8,7 +8,14 @@
 <body style="background: url(../images/wood.png)">
 	<center><div style="height:200px"></div>
 		<div style="padding:50px;width:40%;background-color:rgba(255,255,255,0.8);">
-			<center><span style="font-size:24px;font-weight:600;">请点击右上角按钮     登录或注册</span></center>
+			<c:choose>
+				<c:when test="${message =='error'}">
+					<center><span style="font-size:24px;font-weight:600;">抱歉，出现了一点问题</span></center>
+				</c:when>
+				<c:otherwise>
+					<center><span style="font-size:24px;font-weight:600;">操作成功!</span></center>
+				</c:otherwise>
+			</c:choose>
 			<center><span style="font-size:20px;font-weight:600;"><br><br>即将跳转到首页</span></center>
 		</div>
 	</center>

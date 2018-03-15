@@ -11,14 +11,17 @@
 			<c:choose>
 				<c:when test="${message =='error'}">
 					<center><span style="font-size:24px;font-weight:600;">抱歉，出现了一点问题</span></center>
+					<center><span style="font-size:20px;font-weight:600;"><br><br>即将跳转到首页</span></center>
+					<meta http-equiv="refresh" content="3;url=/index1?search=all">
 				</c:when>
 				<c:otherwise>
 					<center><span style="font-size:24px;font-weight:600;">操作成功!</span></center>
+					<center><span style="font-size:20px;font-weight:600;"><br><br>即将跳转到详细界面</span></center>
+					<meta http-equiv="refresh" content="3;url=/single?postid=${message}">
 				</c:otherwise>
 			</c:choose>
-			<center><span style="font-size:20px;font-weight:600;"><br><br>即将跳转到首页</span></center>
 		</div>
 	</center>
-	<meta http-equiv="refresh" content="3;url=/index1?search=all">
+	
 </body>
 </html>

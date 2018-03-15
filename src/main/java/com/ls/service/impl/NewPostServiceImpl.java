@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +29,7 @@ public class NewPostServiceImpl implements NewPostService {
 	private PostLike postLike;
 	
 	@Override
-	public String checkpost(String post_title, MultipartFile post_file, String post_intro){
+	public String checkpost(HttpServletRequest request,String post_title, MultipartFile post_file, String post_intro){
 		try {
 			System.out.println(post_title);
 			System.out.println(post_intro);
@@ -44,8 +46,11 @@ public class NewPostServiceImpl implements NewPostService {
 					stringRandom += ".png";
 					break;
 			}
-			SaveFileFromInputStream(post_file.getInputStream(), "D:/LS/newpost", stringRandom);
-			return "D:/LS/newpost/"+stringRandom;
+			/*
+			 * 此处地址写死
+			 */
+			SaveFileFromInputStream(post_file.getInputStream(), "E:/L&SWorkspace/LS/WebContent/images/newpost", stringRandom);
+			return "newpost/"+stringRandom;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "error";
@@ -100,6 +105,6 @@ public class NewPostServiceImpl implements NewPostService {
 			postLike.setPostId(postBaseInfo.getPostId());
 			postLike.setLike(0);
 			postLikeMapper.insert(postLike);
-			return "success";
+			return postBaseInfo.getPostId().toString();
 	}
 }

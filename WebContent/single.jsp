@@ -59,21 +59,19 @@
     <div id="page-content" class="sub-page">
 		<div class="container">
 			<center><article>
-				<a class="example-image-link" href="images/01.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/01.jpg" alt=""/></a>
+				<a class="example-image-link" href="http://localhost:8080/images/${postBaseInfo.postImg}" data-lightbox="example-set">
+				<img class="example-image" src="http://localhost:8080/images/${postBaseInfo.postImg}" alt=""/></a>
 				<div class="content-item">
-					<h3 class="title-item"><a href="#">Vestibulum posuere molestie risus</a></h3>
-					<div class="time"> SEPTEMBER 30TH</div>
+					<h3 class="title-item"><a href="#">${postBaseInfo.postTitle}</a></h3>
+					<div class="time">${postBaseInfo.postTime}</div>
 					<ul class="list-inline">
 						<li><a href="#"><i class="fa fa-eye"></i> 260</a></li>
 						<li><a href="#"><i class="fa fa-comment"></i> 260</a></li>
-						<li><a href="#"><i class="fa fa-heart"></i> 260</a></li>
+						<li><a href="#"><i class="fa fa-heart"></i>${postLike.like}</a></li>
 						<li><a href="#"><i class="fa fa-share"></i> 260</a></li>
 					</ul>
-					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</p>
+					<p class="info">${postBaseInfo.postIntro}</p>
 					<br>
-					<h3>Heading Text</h3>
-					<br>
-					<p class="info">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</p>
 				</div>
 				<div class="bottom-item">
 					<a href="#" class="btn btn-share share"><i class="fa fa-share-alt"></i> Share</a>

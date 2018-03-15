@@ -34,7 +34,7 @@ public class NewPostController {
 			@RequestParam("postimg") MultipartFile post_file, @RequestParam("message") String post_intro)
 			throws Exception {
 		ModelAndView mv = new ModelAndView();
-		String message = newPostServiceImpl.checkpost(post_title, post_file, post_intro);
+		String message = newPostServiceImpl.checkpost(request,post_title, post_file, post_intro);
 		if (!"error".equals(message)) {
 			Cookie[] cookies = request.getCookies();
 			if(cookies!=null){
@@ -46,6 +46,7 @@ public class NewPostController {
 						 postBaseInfo.setPostImg(message);
 						 postBaseInfo.setPostTitle(post_title);
 						 postBaseInfo.setPostIntro(post_intro);
+						 postBaseInfo.setPostId(null);
 						 message = newPostServiceImpl.saveInfo(postBaseInfo);
 					}
 				}

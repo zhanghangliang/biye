@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    post_id, like
+    post_id, `like`
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ls.entity.PostLikeExample" >
     select

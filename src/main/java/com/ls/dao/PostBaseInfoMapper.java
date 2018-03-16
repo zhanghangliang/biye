@@ -36,4 +36,6 @@ public interface PostBaseInfoMapper {
     int updateByPrimaryKeyWithBLOBs(PostBaseInfo record);
 
     int updateByPrimaryKey(PostBaseInfo record);
+    
+    List<PostBaseInfo> selectPostBaseInfoByLimit(@Param("arg1") String arg1);
 }

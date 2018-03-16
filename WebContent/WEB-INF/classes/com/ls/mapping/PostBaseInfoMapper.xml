@@ -267,4 +267,15 @@
       post_time = #{postTime,jdbcType=TIMESTAMP}
     where post_id = #{postId,jdbcType=INTEGER}
   </update>
+  <resultMap id="BaseMap" type="com.ls.entity.PostBaseInfo" >
+    <id column="post_id" property="postId"/>
+    <result column="user_id" property="userId"/>
+    <result column="post_img" property="postImg"/>
+    <result column="post_title" property="postTitle"/>
+    <result column="post_time" property="postTime"/>
+    <result column="post_intro" property="postIntro"/>
+  </resultMap>
+  <select id="selectPostBaseInfoByLimit" resultMap="BaseMap" parameterType="java.lang.String">
+	  select * from post_base_info WHERE post_title LIKE #{arg1} limit 0,30
+  </select>
 </mapper>

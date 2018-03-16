@@ -13,7 +13,7 @@
 		<div class="header">
 		<div id='cssmenu' >
 			<ul>
-			   <li class="active"><a href='index.jsp'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
+			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
 			   <li class=' has-sub'><a href="#"><span>Category</span></a>
 				  <ul>
 					 <li class='has-sub'><a href="#"><span>${lil}</span></a>
@@ -36,11 +36,11 @@
 			</ul>
 		</div>
 	</div>
-		<form action="/checkpost" method="post" class="smart-green" enctype="multipart/form-data" onsubmit="return check();">
+		<form action="/checkpost" method="post" class="smart-green" enctype="multipart/form-data" onsubmit="return check();"></canvas>
 			<h1>摄影作品上传<span>与同一个世界 · 分享 · 不一样的美好</span></h1>
 			<label> 
 				<br><span>作品标题:</span>
-				<input id="name" type="text" name="name" placeholder="给你的作品起个名字吧！" maxlength="15"/>
+				<input id="name" type="text" name="name" placeholder="给你的作品起个名字吧！" maxlength="14"/>
 			</label>
 			<label>
 				<br>
@@ -58,13 +58,12 @@
 			<center>
 				<label>
 					<br><span>&nbsp;</span>
-					
 					<input type="submit">
 				</label>
 			</center>
 		</form>
-		
 	<script type="text/javascript" src="js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="js/barrage/barrage.js" ></script>
 	<script type="text/javascript" src="js/newpost/newpost.js" ></script>
 	
 	</body>

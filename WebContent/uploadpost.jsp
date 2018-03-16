@@ -53,7 +53,7 @@
 			</label>
 			<label>
 				<br><span>图片简介:</span>
-				<textarea id="message" name="message" placeholder="最大字数不超过500字" maxlength="500"></textarea> 
+				<textarea id="message" name="message" placeholder="最大字数不超过200字" maxlength="200"></textarea> 
 			</label>
 			<center>
 				<label>

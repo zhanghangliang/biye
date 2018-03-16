@@ -53,7 +53,7 @@
 		照片墙预览
 	  </li>
 	  <li class="wrap">
-		信息完善
+		信息管理
 	  </li>
 	  <li class="ship">
 		个性展示
@@ -74,37 +74,40 @@
 	
 	
 	<div id="second">
+	  <input class="photowallimg" type="button" value="更改说明" onclick=note()>
 	  <fieldset>
 		<legend class="title">
 			照片墙
 		</legend>
 		<div class="cont">
 			<div class="wall">
-				<img class="img1" src="images/01.jpg" height="105" width="125" alt="">
-				<img class="img2" src="images/02.jpg" height="105" width="125" alt="">
+				<img title="照片墙1" class="img1" src="images/01.jpg" height="105" width="125" alt="未上传">
+				<img title="照片墙2" class="img2" src="images/02.jpg" height="105" width="125" alt="未上传">
 			</div>
 			<div class="wall">
-				<img class="img3" src="images/03.jpg" height="90" width="105" alt="">
-				<img class="img4" src="images/04.jpg" height="135" width="150" alt="">
-				<img class="img5" src="images/05.jpg" height="60" width="75" alt="">
+				<img title="照片墙3" class="img3" src="images/03.jpg" height="90" width="105" alt="未上传">
+				<img title="照片墙4" class="img4" src="images/04.jpg" height="135" width="150" alt="未上传">
+				<img title="照片墙5" class="img5" src="images/05.jpg" height="60" width="75" alt="未上传">
 			</div>
 			<div class="wall">
-				<img class="img6" src="images/06.jpg" height="105" width="125" alt="">
-				<img class="img7" src="images/07.jpg" height="105" width="125" alt="">
+				<img title="照片墙6" class="img6" src="images/06.jpg" height="105" width="125" alt="未上传">
+				<img title="照片墙7" class="img7" src="images/07.jpg" height="105" width="125" alt="未上传">
 			</div>
 		</div>
 	  </fieldset>
+	  <label id="filelabel" for="file"><span class="photowallimg">上传图片</span></label>
+	  <input value="准备图片" type="file" accept="image/*" id="file" name="postimg" size="10" style="display: none"/>
 	</div>
 	
 	<div id="third">
 		<div id="testleft">
-			<span class='baseInf'>昵称&nbsp&nbsp
+			<span class='baseInf'>昵&nbsp&nbsp称&nbsp&nbsp
 				<input type="text" value="" name="cutename" placeholder="昵称限8字以内" required>
 			</span>
 			<br>
 			<br>
 			<div style='height:7px'></div>
-			<span class='baseInf'>性别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class='baseInf'>性&nbsp&nbsp别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 				<tr><td>
 					<input class="sex" type="radio" name="sex" value="1" required>男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<input class="sex" type="radio" name="sex" value="1">女
@@ -112,10 +115,11 @@
 			</span>
 		</div>
 		<div id="testright">
-			<span>邮箱&nbsp&nbsp<input type="email" value="" name="email" placeholder="请输入有效的邮箱地址" required></span>
-			<br>
-			<br>
-			<span>年龄&nbsp&nbsp<input type="age" value="" name="age" required></span>
+			<span>邮&nbsp&nbsp箱&nbsp&nbsp<input type="email" value="" name="email" placeholder="请输入有效的邮箱地址" required></span>
+			<br><br>
+			<span>签名档<input type="text" value="" name="profile" required></span>
+			<br><br>
+			<input class="rightButton" type="button" value=" 提交信息 "/>
 		</div>
 	</div>
 	
@@ -138,7 +142,8 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-<script type="text/javascript" src="js/person.js"></script>
+<script type="text/javascript" src="js/contact/person.js"></script>
+<script type="text/javascript" src="js/contact/photowall.js"></script>
 
 </body>
 </html>

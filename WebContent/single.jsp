@@ -63,13 +63,14 @@
 				<img class="example-image" src="http://localhost:8080/images/${postBaseInfo.postImg}" alt=""/></a>
 				<div class="content-item">
 					<h3 class="title-item"><a href="#">${postBaseInfo.postTitle}</a></h3>
-					<div class="time">${postBaseInfo.postTime}</div>
+					<div class="time">${time}</div>
 					<ul class="list-inline">
 						<li><a href="#"><i class="fa fa-eye"></i> 260</a></li>
 						<li><a href="#"><i class="fa fa-comment"></i> 260</a></li>
 						<li><a href="#"><i class="fa fa-heart"></i>${postLike.like}</a></li>
 						<li><a href="#"><i class="fa fa-share"></i> 260</a></li>
 					</ul>
+					<br>
 					<p class="info">${postBaseInfo.postIntro}</p>
 					<br>
 				</div>

@@ -121,7 +121,7 @@
 	<div id="page-content" class="index-page">
 		<div id="container">
 			<c:forEach items="${selectFirst}" var="post">
-				<div class="item">
+				<div class="item" id="${post.postId}" value="0">
 				<a class="example-image-link" href="http://localhost:8080/images/${post.postImg}" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="http://localhost:8080/images/${post.postImg}" alt="#"/></a>
 				<div class="content-item">
 					<h3 class="title-item"><a href="/single?postid=${post.postId}">${post.postTitle}</a></h3>
@@ -129,7 +129,7 @@
 					<p class="info">${post.postIntro}</p>
 				</div>
 					<div class="bottom-item">
-						<span class='btn btn-like'>赞99999+ <i class='fa fa-thumbs-o-up'></i></span>
+						<span class='btn btn-like'>为它点赞 <i class='fa fa-thumbs-o-up'></i></span>
 						<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
 						<a href="/single?postid=${post.postId}" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 					</div>

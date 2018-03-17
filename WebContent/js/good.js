@@ -62,4 +62,22 @@ $(function () {
 			alert("您今日点赞次数已达上限!");
 		}
 	});
+	
+	$(".btn-like").hover(function(){
+		if($(this).parent().parent().attr("value")==0){
+			var goods = 0;
+			$.post("/goodTime", {
+				postid : $(this).parent().parent().attr("id")
+			}, function(data,status) {
+				var words = data.split("_");
+				if(words[1]>=100000){
+					$("#"+words[0]).children(".bottom-item").children(".btn-like").text("赞99999+ ");
+				}else {
+					$("#"+words[0]).children(".bottom-item").children(".btn-like").text("赞"+words[1]+" ");
+				}
+				$("#"+words[0]).children(".bottom-item").children(".btn-like").append("<i class='fa fa-thumbs-o-up'></i>");
+			})
+			$(this).parent().parent().attr("value",1);
+		}
+	},function(){});
 });

@@ -37,6 +37,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 			<mvc:mapping path="/**" />
 			<!-- 不进行拦截 -->
 			<mvc:exclude-mapping path="/index1"/>
+			<mvc:exclude-mapping path="/goodTime"/>
 			<mvc:exclude-mapping path="/logincheck"/>
 			<mvc:exclude-mapping path="/regischeck/**"/>
 			<mvc:exclude-mapping path="/css/**"/>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ls.entity.PostBaseInfo;
@@ -38,4 +39,10 @@ public class IndexController {
         mv.setViewName("/inde");
         return mv;
     }
+	
+	@RequestMapping("/goodTime")
+	@ResponseBody
+	public String goodTime(@RequestParam("postid")Integer postid){
+		return postid+"_"+indexSelectServiceImpl.selectLike(postid).get(0).getLike().toString();
+	}
 }

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ls.dao.UserDetailInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.ls.entity.UserDetailInfo" >
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="photo1" property="photo1" jdbcType="VARCHAR" />
+    <result column="photo2" property="photo2" jdbcType="VARCHAR" />
+    <result column="photo3" property="photo3" jdbcType="VARCHAR" />
+    <result column="photo4" property="photo4" jdbcType="VARCHAR" />
+    <result column="photo5" property="photo5" jdbcType="VARCHAR" />
+    <result column="photo6" property="photo6" jdbcType="VARCHAR" />
+    <result column="photo7" property="photo7" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.ls.entity.UserDetailInfo" extends="BaseResultMap" >
+    <result column="personal_profile" property="personalProfile" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    user_id, name, email, sex, photo1, photo2, photo3, photo4, photo5, photo6, photo7
+  </sql>
+  <sql id="Blob_Column_List" >
+    personal_profile
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.ls.entity.UserDetailInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from user_detail_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ls.entity.UserDetailInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from user_detail_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.ls.entity.UserDetailInfoExample" >
+    delete from user_detail_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ls.entity.UserDetailInfo" >
+    insert into user_detail_info (user_id, name, email, 
+      sex, photo1, photo2, 
+      photo3, photo4, photo5, 
+      photo6, photo7, personal_profile
+      )
+    values (#{userId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{photo1,jdbcType=VARCHAR}, #{photo2,jdbcType=VARCHAR}, 
+      #{photo3,jdbcType=VARCHAR}, #{photo4,jdbcType=VARCHAR}, #{photo5,jdbcType=VARCHAR}, 
+      #{photo6,jdbcType=VARCHAR}, #{photo7,jdbcType=VARCHAR}, #{personalProfile,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ls.entity.UserDetailInfo" >
+    insert into user_detail_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="photo1 != null" >
+        photo1,
+      </if>
+      <if test="photo2 != null" >
+        photo2,
+      </if>
+      <if test="photo3 != null" >
+        photo3,
+      </if>
+      <if test="photo4 != null" >
+        photo4,
+      </if>
+      <if test="photo5 != null" >
+        photo5,
+      </if>
+      <if test="photo6 != null" >
+        photo6,
+      </if>
+      <if test="photo7 != null" >
+        photo7,
+      </if>
+      <if test="personalProfile != null" >
+        personal_profile,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="photo1 != null" >
+        #{photo1,jdbcType=VARCHAR},
+      </if>
+      <if test="photo2 != null" >
+        #{photo2,jdbcType=VARCHAR},
+      </if>
+      <if test="photo3 != null" >
+        #{photo3,jdbcType=VARCHAR},
+      </if>
+      <if test="photo4 != null" >
+        #{photo4,jdbcType=VARCHAR},
+      </if>
+      <if test="photo5 != null" >
+        #{photo5,jdbcType=VARCHAR},
+      </if>
+      <if test="photo6 != null" >
+        #{photo6,jdbcType=VARCHAR},
+      </if>
+      <if test="photo7 != null" >
+        #{photo7,jdbcType=VARCHAR},
+      </if>
+      <if test="personalProfile != null" >
+        #{personalProfile,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ls.entity.UserDetailInfoExample" resultType="java.lang.Integer" >
+    select count(*) from user_detail_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update user_detail_info
+    <set >
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sex != null" >
+        sex = #{record.sex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo1 != null" >
+        photo1 = #{record.photo1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo2 != null" >
+        photo2 = #{record.photo2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo3 != null" >
+        photo3 = #{record.photo3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo4 != null" >
+        photo4 = #{record.photo4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo5 != null" >
+        photo5 = #{record.photo5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo6 != null" >
+        photo6 = #{record.photo6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.photo7 != null" >
+        photo7 = #{record.photo7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.personalProfile != null" >
+        personal_profile = #{record.personalProfile,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update user_detail_info
+    set user_id = #{record.userId,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      sex = #{record.sex,jdbcType=VARCHAR},
+      photo1 = #{record.photo1,jdbcType=VARCHAR},
+      photo2 = #{record.photo2,jdbcType=VARCHAR},
+      photo3 = #{record.photo3,jdbcType=VARCHAR},
+      photo4 = #{record.photo4,jdbcType=VARCHAR},
+      photo5 = #{record.photo5,jdbcType=VARCHAR},
+      photo6 = #{record.photo6,jdbcType=VARCHAR},
+      photo7 = #{record.photo7,jdbcType=VARCHAR},
+      personal_profile = #{record.personalProfile,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update user_detail_info
+    set user_id = #{record.userId,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      sex = #{record.sex,jdbcType=VARCHAR},
+      photo1 = #{record.photo1,jdbcType=VARCHAR},
+      photo2 = #{record.photo2,jdbcType=VARCHAR},
+      photo3 = #{record.photo3,jdbcType=VARCHAR},
+      photo4 = #{record.photo4,jdbcType=VARCHAR},
+      photo5 = #{record.photo5,jdbcType=VARCHAR},
+      photo6 = #{record.photo6,jdbcType=VARCHAR},
+      photo7 = #{record.photo7,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByUseridAndWhich">
+  	update user_detail_info
+  	set ${which} = #{photo} WHERE user_id = #{userid}
+  </update>
+</mapper>

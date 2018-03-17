@@ -25,9 +25,12 @@ document.getElementById('file').onchange = function() {
 			$(".img7").attr("src",fr.result);
 		}
 		else{
+			$("#file").val("");
 			alert("您选择了不存在的编号，请重新上传");
+			return;
 		}
-		$("#file").val("");
+		$("#which").val(name);
+		$("#wallpush").trigger("click");
 	};
 	fr.readAsDataURL(imgFile);
 };

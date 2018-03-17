@@ -26,4 +26,7 @@ public interface UserDetailInfoMapper {
     int updateByExampleWithBLOBs(@Param("record") UserDetailInfo record, @Param("example") UserDetailInfoExample example);
 
     int updateByExample(@Param("record") UserDetailInfo record, @Param("example") UserDetailInfoExample example);
+    
+    //add
+    int updateByUseridAndWhich(@Param("which")String which,@Param("photo")String photo,@Param("userid")Integer userid);
 }

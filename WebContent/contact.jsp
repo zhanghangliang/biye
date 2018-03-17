@@ -37,6 +37,7 @@
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
 			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
 			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
+			   <li class='last' id="loginOut"><a href="/index1?search=all" onclick="loginOut()"><span>| 退出账户 |</span></a></li>
 			</ul>
 		</div>
 <div id="wrapper">
@@ -92,7 +93,11 @@
 		</div>
 	  </fieldset>
 	  <label id="filelabel" for="file"><span class="photowallimg">上传图片</span></label>
-	  <input value="准备图片" type="file" accept="image/*" id="file" name="postimg" size="10" style="display: none"/>
+	  <form action="/changeSinglePhoto" method="post" enctype="multipart/form-data" onsubmit=>
+	  	<input value="准备图片" type="file" accept="image/*" id="file" name="postimg" size="10" style="display: none"/>
+	  	<input id="which" type="text" name="which" style="display: none"/>
+	  	<input id="wallpush" type="submit" style="display: none"/>
+	  </form>
 	</div>
 	
 	<div id="third">
@@ -140,6 +145,7 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
 <script type="text/javascript" src="js/contact/person.js"></script>
 <script type="text/javascript" src="js/contact/photowall.js"></script>
 

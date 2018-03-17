@@ -78,3 +78,9 @@ $('.ship').click(function () {
 	$('#third').removeClass('active');
 	$('#fourth').addClass('active');
 });
+
+function loginOut(){
+	delCookie("loginUserid");
+	delCookie("loginUser");
+	delCookie("loginType");
+}

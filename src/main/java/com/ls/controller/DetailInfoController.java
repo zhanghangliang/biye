@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ls.entity.UserDetailInfo;
@@ -54,9 +55,26 @@ public class DetailInfoController {
 				}
 			}
 		}
-        System.out.println(userDetailInfo.getPersonalProfile());
         mv.addObject("User",userDetailInfo);
         mv.setViewName("/contact");
+        return mv;
+    }
+	
+	@RequestMapping("/changeSinglePhoto")
+    public ModelAndView changePhoto(HttpServletRequest request,@RequestParam("postimg")MultipartFile photo,@RequestParam("which")Integer which)
+    {
+		String message ="error";
+        ModelAndView mv=new ModelAndView("/contact");
+        Cookie[] cookies = request.getCookies();
+        if(cookies!=null){
+			for(Cookie cookie:cookies){
+				 if ("loginUserid".equals(cookie.getName())) {
+					 message = detailInfoServiceImpl.savePhotoWallInfo(Integer.parseInt(cookie.getValue()), photo, which);
+				}
+			}
+		}
+        mv.addObject("message",message);
+        mv.setViewName("/message");
         return mv;
     }
 }

@@ -1,9 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-	String li = new String("掌握hex");
-	request.setAttribute("lil", li);
-%>
 <!doctype html>
 <html lang="zh">
 <head>
@@ -24,7 +20,7 @@
 			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
 			   <li class=' has-sub'><a href="#"><span>Category</span></a>
 				  <ul>
-					 <li class='has-sub'><a href="#"><span>${lil}</span></a>
+					 <li class='has-sub'><a href="#"><span>Sub Item</span></a>
 						<ul>
 						   <li><a href="#"><span>Sub Item</span></a></li>
 						   <li class='last'><a href="#"><span>Sub Item</span></a></li>
@@ -81,17 +77,17 @@
 		</legend>
 		<div class="cont">
 			<div class="wall">
-				<img title="照片墙1" class="img1" src="images/01.jpg" height="105" width="125" alt="未上传">
-				<img title="照片墙2" class="img2" src="images/02.jpg" height="105" width="125" alt="未上传">
+				<img title="照片墙1" class="img1" src="${User.photo1}" height="105" width="125" alt="未上传">
+				<img title="照片墙2" class="img2" src="${User.photo2}" height="105" width="125" alt="未上传">
 			</div>
 			<div class="wall">
-				<img title="照片墙3" class="img3" src="images/03.jpg" height="90" width="105" alt="未上传">
-				<img title="照片墙4" class="img4" src="images/04.jpg" height="135" width="150" alt="未上传">
-				<img title="照片墙5" class="img5" src="images/05.jpg" height="60" width="75" alt="未上传">
+				<img title="照片墙3" class="img3" src="${User.photo3}" height="90" width="105" alt="未上传">
+				<img title="照片墙4" class="img4" src="${User.photo4}" height="135" width="150" alt="未上传">
+				<img title="照片墙5" class="img5" src="${User.photo5}" height="60" width="75" alt="未上传">
 			</div>
 			<div class="wall">
-				<img title="照片墙6" class="img6" src="images/06.jpg" height="105" width="125" alt="未上传">
-				<img title="照片墙7" class="img7" src="images/07.jpg" height="105" width="125" alt="未上传">
+				<img title="照片墙6" class="img6" src="${User.photo6}" height="105" width="125" alt="未上传">
+				<img title="照片墙7" class="img7" src="${User.photo7}" height="105" width="125" alt="未上传">
 			</div>
 		</div>
 	  </fieldset>
@@ -101,25 +97,27 @@
 	
 	<div id="third">
 		<div id="testleft">
+		<form action="/detailInfo" method="post">
 			<span class='baseInf'>昵&nbsp&nbsp称&nbsp&nbsp
-				<input type="text" value="" name="cutename" placeholder="昵称限8字以内" required>
+				<input type="text" value="${User.name}" name="cutename" placeholder="昵称限8字以内" required>
 			</span>
 			<br>
 			<br>
 			<div style='height:7px'></div>
 			<span class='baseInf'>性&nbsp&nbsp别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 				<tr><td>
-					<input class="sex" type="radio" name="sex" value="1" required>男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-					<input class="sex" type="radio" name="sex" value="1">女
+					<input class="sex" type="radio" name="sex" value="1"/>男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input class="sex" type="radio" name="sex" value="2" checked="checked"/>女
 				</td></tr>
 			</span>
 		</div>
 		<div id="testright">
-			<span>邮&nbsp&nbsp箱&nbsp&nbsp<input type="email" value="" name="email" placeholder="请输入有效的邮箱地址" required></span>
+			<span>邮&nbsp&nbsp箱&nbsp&nbsp<input type="email" value="${User.email}" name="email" placeholder="请输入有效的邮箱地址" required></span>
 			<br><br>
-			<span>签名档<input type="text" value="" name="profile" required></span>
+			<span>签名档<input type="text" value="${User.personalProfile}" name="personalProfile" required></span>
 			<br><br>
-			<input class="rightButton" type="button" value=" 提交信息 "/>
+			<input class="rightButton" type="submit" value=" 提交信息 "/>
+		</form>
 		</div>
 	</div>
 	

@@ -36,7 +36,7 @@
 			</ul>
 		</div>
 	</div>
-		<form action="/checkpost" method="post" class="smart-green" enctype="multipart/form-data" onsubmit="return check();"></canvas>
+		<form action="/checkpost" method="post" class="smart-green" enctype="multipart/form-data" onsubmit="return check();">
 			<h1>摄影作品上传<span>与同一个世界 · 分享 · 不一样的美好</span></h1>
 			<label> 
 				<br><span>作品标题:</span>

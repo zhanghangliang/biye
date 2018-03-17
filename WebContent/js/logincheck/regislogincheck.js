@@ -78,7 +78,6 @@ function acpwdcheck(){
 		}, function(data){
 			var words = data.split("_");
 			if(words[1]=="success1"){
-				alert("success1");
 				setCookie('loginUserid',words[0],1);
 				setCookie('loginUser',$("#loginac").val(),1);
 				setCookie('loginType','normal',1);

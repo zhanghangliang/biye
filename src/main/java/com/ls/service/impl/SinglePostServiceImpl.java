@@ -1,8 +1,5 @@
 package com.ls.service.impl;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,11 +33,4 @@ public class SinglePostServiceImpl implements SinglePostService{
 		example.clear();
 		return postLike;
 	}
-
-	@Override
-	public String timeparse(Date date) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		return sdf.format(date);
-	}
-
 }

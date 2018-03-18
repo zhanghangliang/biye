@@ -1,13 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description"
-	content="Free Bootstrap Themes by Html5xCss3 dot com - Free Responsive Html5 Templates">
 <meta name="author" content="#">
 
 <title>Light & Shadow</title>
@@ -29,8 +28,8 @@
 <link rel="stylesheet" href="css/pinglun/comment.css">
 
 <!-- 右侧评论框 -->
-<link rel="stylesheet" href="css/single/barrage.css">
 <link rel="stylesheet" href="css/single/swiper.min.css">
+<link rel="stylesheet" href="css/single/barrage.css">
 
 </head>
 <body>
@@ -60,7 +59,7 @@
 	</div>
 
 	<div id="page-content" class="sub-page">
-		<div class="container">
+		<div class="container" id="${postBaseInfo.postId}">
 			<center>
 				<article>
 					<a class="example-image-link"
@@ -139,10 +138,10 @@
 				<div class="dm">
 					<!--d_screen start-->
 					<div class="d_screen">
-						<div class="d_mask"></div>
 						<div class="d_show">
-							<div></div>
-							<div>Light & Shadow</div>
+						<jsp:useBean id="time" class="java.util.Date"/>  
+							<div><center><fmt:formatDate value="<%=time%>" pattern="yyyy-MM-dd HH:mm:ss"/></center></div>
+							<div><center>Light & Shadow</center></div>
 						</div>
 					</div>
 				</div>
@@ -159,12 +158,7 @@
 		</div>
 	</div>
 	
-	<!-- Once the page is loaded, initialized the plugin. -->
 	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-
-	<!-- SmartMenus jQuery Bootstrap Addon -->
-	<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>
 
 	<script src="js/lightbox-plus-jquery.min.js"></script>
 
@@ -176,7 +170,7 @@
 	<script type="text/javascript" src="js/pinglun/pinglun.js"></script>
 	
 	<!-- 右侧评论框 -->
-	<script type="text/javascript" src="js/single/barrage.js"></script>
 	<script type="text/javascript" src="js/single/swiper.min.js"></script>
+	<script type="text/javascript" src="js/single/barrage.js"></script>
 </body>
 </html>

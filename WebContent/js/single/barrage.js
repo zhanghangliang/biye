@@ -1,9 +1,14 @@
 function send_reply2() {
 var content = $("#reply-write").val();
+
 if ($.trim(content) == "") {
 	alert("亲，您发送的内容为空！");
 	return false;
 }
+	$.post("/newBarrage",{
+		barrage : $("#reply-write").val(),
+		postid  : $(".container").attr("id")
+	})
 	var text=$("#reply-write").val();
 	input(text)
 	$("#reply-write").val("");
@@ -14,27 +19,28 @@ if ($.trim(content) == "") {
 	}
 }
 $(function(){
-	var date=[{'id':1,'val':'站长素材'},{'id':2,'val':'新年花枝俏'},{'id':3,'val':'俏也不争春'},{'id':4,'val':'只报福来报'},{'id':4,'val':'冬雪静静飘'},{'id':4,'val':'祝福悄悄到'},{'id':4,'val':'快乐在你身边绕'},{'id':4,'val':'好运相伴不会少'},{'id':4,'val':'sc.chinaz.com'}];
-	var i=0;
+	var date=[{"barrage":"哇美女","postId":5,"userId":5},{"barrage":"看起来完全不像死板的犹太人，能够感受到那种犹太节日不一样的气息","postId":5,"userId":3},{"barrage":"看起来不错哦","postId":5,"userId":26},{"barrage":"这背景模糊绝了！","postId":5,"userId":3},{"barrage":"给up主点赞！！！","postId":5,"userId":27},{"barrage":"前排瓜子花生出售","postId":5,"userId":2},{"barrage":"66666","postId":5,"userId":2},{"barrage":"萌萌哒","postId":5,"userId":25},{"barrage":"66666666666","postId":5,"userId":5},{"barrage":"前排露脸+1","postId":5,"userId":5},{"barrage":"还有类似的图片咩","postId":5,"userId":5}];
+	$.ajax({url:"/getBarrage",dataType:"json",data:"postid="+$(".container").attr("id"),complete:function(data){date=eval("("+JSON.stringify(data)+")").responseJSON}});
+	var i=2;
 	setInterval(function(){
 		if($(".d_show").height()<280){
 			if(i<date.length){
-				input(date[i].val)
+				input(date[i].barrage)
 				i++;
 			}else{
 				i=0	
-				input(date[i].val)
+				input(date[i].barrage)
 				i++;
 			}
 		}else{
 			init_screen();
 			$($(".d_show").children("div").get(0)).remove();
 			if(i<date.length){
-				input(date[i].val)
+				input(date[i].barrage)
 				i++;
 			}else{
 				i=0	
-				input(date[i].val)
+				input(date[i].barrage)
 				i++;
 			}
 		}

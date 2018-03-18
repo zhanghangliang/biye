@@ -34,6 +34,7 @@ h6 {font-size: 20px;}
 h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;font-weight: 600;color: #111;margin-bottom: 10px;}
 
 p {max-height: 200px;min-height:80px;overflow: hidden;text-indent: 2em;line-height: 1.4;}
+.inline {display: inline;}
 .content-item:hover > p {overflow: auto}
 
 a {
@@ -175,3 +176,5 @@ article h3{padding: 0;}
 .btn-search:hover{color: #333333;
   background-color: #adadad;
   }
+#equalA{display:inline}
+#equalB{display:inline}

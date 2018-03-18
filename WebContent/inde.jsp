@@ -1,11 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light & Shadow </title>
 	
 	<link rel="stylesheet" href="css/menu.css">
@@ -89,9 +90,9 @@
 									<span class="icon icon-close">Close the dialog</span>
 									<h2 style="font-size:40px;font-weight:bold;">登&nbsp&nbsp&nbsp&nbsp录</h2>
 									<form>
-										<p><label>用户名</label><input id="loginac" type="text" /></p>
-										<p><label>密码</label><input id="loginpwd" type="password" /></p>
-										<p><button type="button" id="login">点&nbsp&nbsp击&nbsp&nbsp登&nbsp&nbsp录</button></p>
+										<p class="inline"><label>用户名</label><input id="loginac" type="text" /></p>
+										<p class="inline"><label>密码</label><input id="loginpwd" type="password" /></p>
+										<p class="inline"><button type="button" id="login">点&nbsp&nbsp击&nbsp&nbsp登&nbsp&nbsp录</button></p>
 									</form>
 								</div>
 							</div>
@@ -105,10 +106,10 @@
 									<span class="icon icon-close">Close the dialog</span>
 									<h2 style="font-size:40px;font-weight:bold;" >注&nbsp&nbsp&nbsp&nbsp册</i></h2>
 									<form>
-										<p><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="13" placeholder="请输入5-13位账号"/></p>
-										<p><label>密码</label><input id="lspwd" name="lspasswd" type="password" maxlength="15" placeholder="请输入6-15位密码"/></p>
-										<p><label>再次输入密码</label><input id="repwd" type="password" maxlength="15" placeholder="请再次输入密码"/></p>
-										<p><button id="newregis" type="button" >点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
+										<p class="inline"><label>登录账号</label><input id="zhuceaccount" name="lsaccount" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" maxlength="13" placeholder="请输入5-13位账号"/></p>
+										<p class="inline"><label>密码</label><input id="lspwd" name="lspasswd" type="password" maxlength="15" placeholder="请输入6-15位密码"/></p>
+										<p class="inline"><label>再次输入密码</label><input id="repwd" type="password" maxlength="15" placeholder="请再次输入密码"/></p>
+										<p class="inline"><button id="newregis" type="button" >点&nbsp&nbsp击&nbsp&nbsp注&nbsp&nbsp册</button></p>
 									</form>
 								</div>
 							</div>
@@ -125,12 +126,12 @@
 				<a class="example-image-link" href="http://localhost:8080/images/${post.postImg}" data-lightbox="example-set" data-title="点击图像右半部分向前移动"><img class="example-image" src="http://localhost:8080/images/${post.postImg}" alt="#"/></a>
 				<div class="content-item">
 					<h3 class="title-item"><a href="/single?postid=${post.postId}">${post.postTitle}</a></h3>
-					<div class="time">${post.postTime}<input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
+					<div class="time"><fmt:formatDate value="${post.postTime}" pattern="yyyy-MM-dd HH:mm:ss"/><input class="adminDelete" type="image" src="images/dell.jpg" name="img" style="float:right;height:20px;width:20px;display:none"></div>
 					<p class="info">${post.postIntro}</p>
 				</div>
 					<div class="bottom-item">
 						<span class='btn btn-like'>为它点赞 <i class='fa fa-thumbs-o-up'></i></span>
-						<a href="#" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
+						<a href="/single?postid=${post.postId}" class="btn btn-comment"><i class="fa fa-comment-o"></i></a>
 						<a href="/single?postid=${post.postId}" class="btn btn-more"><i class="fa fa-long-arrow-right "></i></a>
 					</div>
 				</div>

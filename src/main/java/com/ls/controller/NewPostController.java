@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ls.entity.PostBaseInfo;
 import com.ls.service.impl.NewPostServiceImpl;
+import com.ls.utils.CommonUtil;
 
 @Controller
 public class NewPostController {
@@ -42,7 +43,7 @@ public class NewPostController {
 					 System.out.println(cookie.getName()+"------"+cookie.getValue());
 					 if ("loginUserid".equals(cookie.getName())) {
 						 postBaseInfo.setUserId(Integer.parseInt(cookie.getValue()));
-						 postBaseInfo.setPostTime(newPostServiceImpl.nowTime());
+						 postBaseInfo.setPostTime(CommonUtil.nowTime());
 						 postBaseInfo.setPostImg(message);
 						 postBaseInfo.setPostTitle(post_title);
 						 postBaseInfo.setPostIntro(post_intro);

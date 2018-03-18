@@ -1,10 +1,6 @@
 package com.ls.service.impl;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.util.List;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +11,7 @@ import com.ls.entity.UserDetailInfoExample.Criteria;
 import com.ls.entity.UserDetailInfo;
 import com.ls.entity.UserDetailInfoExample;
 import com.ls.service.DetailInfoService;
+import com.ls.utils.CommonUtil;
 
 @Service
 public class DetailInfoServiceImpl implements DetailInfoService{
@@ -40,7 +37,7 @@ public class DetailInfoServiceImpl implements DetailInfoService{
 	@Override
 	public String savePhotoWallInfo(Integer user, MultipartFile photo, Integer which) {
 		try {
-			String stringRandom = getStringRandom(8);
+			String stringRandom = CommonUtil.getStringRandom(8);
 			switch (photo.getContentType()) {
 				case "image/jpeg":
 					stringRandom += ".jpg";
@@ -55,7 +52,7 @@ public class DetailInfoServiceImpl implements DetailInfoService{
 			/*
 			 * 此处地址写死
 			 */
-			SaveFileFromInputStream(photo.getInputStream(), "E:/L&SWorkspace/LS/WebContent/images/photowall/"+user, stringRandom);
+			CommonUtil.SaveFileFromInputStream(photo.getInputStream(), "E:/L&SWorkspace/LS/WebContent/images/photowall/"+user, stringRandom);
 			mapper.updateByUseridAndWhich("photo"+which, "images/photowall/"+user+"/"+stringRandom, user);
 			return "wait";
 		} catch (Exception e) {
@@ -76,43 +73,5 @@ public class DetailInfoServiceImpl implements DetailInfoService{
 		List<UserDetailInfo> list = mapper.selectByExampleWithBLOBs(example);
 		example.clear();
 		return list.get(0);
-	}
-	
-	@Override
-	public void SaveFileFromInputStream(InputStream stream, String path, String filename) throws Exception {
-		File file =new File(path);
-		//如果文件夹不存在则创建    
-		if  (!file .exists()  && !file .isDirectory())      
-		{file .mkdir();}
-		FileOutputStream fs = new FileOutputStream(path + "/" + filename);
-		byte[] buffer = new byte[1024 * 1024];
-		int bytesum = 0;
-		int byteread = 0;
-		while ((byteread = stream.read(buffer)) != -1) {
-			bytesum += byteread;
-			fs.write(buffer, 0, byteread);
-			fs.flush();
-		}
-		fs.close();
-		stream.close();
-	}
-	
-	@Override
-	public String getStringRandom(int length) {
-		String val = "";
-		Random random = new Random();
-		// length为几位密码
-		for (int i = 0; i < length; i++) {
-			String charOrNum = random.nextInt(2) % 2 == 0 ? "char" : "num";
-			// 输出字母还是数字
-			if ("char".equalsIgnoreCase(charOrNum)) {
-				// 输出是大写字母还是小写字母
-				int temp = random.nextInt(2) % 2 == 0 ? 65 : 97;
-				val += (char) (random.nextInt(26) + temp);
-			} else if ("num".equalsIgnoreCase(charOrNum)) {
-				val += String.valueOf(random.nextInt(10));
-			}
-		}
-		return val;
 	}
 }

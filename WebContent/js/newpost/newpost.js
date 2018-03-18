@@ -1,12 +1,12 @@
 //show img 上传图片后展示
 document.getElementById('file').onchange = function() {
-	alert("111");
 	var imgFile = this.files[0];
 	var fr = new FileReader();
 	fr.onload = function() {
 		document.getElementById('image1').getElementsByTagName('img')[0].src = fr.result;
 	};
 	fr.readAsDataURL(imgFile);
+	$("#image1").show("normal");
 };
 
 // 上传数据
@@ -29,17 +29,6 @@ function check() {
 		return false;
 	} 
 	return true;
-//	else {
-//		// 首先异步判断是否填写正确
-//		$.post("/checkpost", {
-//			post_title : $("#name").val(),
-//			post_file : $("#file").val(),
-//			post_intro : $("#message").val(),
-//			img_type: fileType
-//		}, function(data, status) {
-//			alert(data);
-//		});
-//	}
 }
 
 function getFileType(filePath) {

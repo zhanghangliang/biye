@@ -63,7 +63,6 @@
 			</center>
 		</form>
 	<script type="text/javascript" src="js/jquery-2.1.1.js" ></script>
-	<script type="text/javascript" src="js/barrage/barrage.js" ></script>
 	<script type="text/javascript" src="js/newpost/newpost.js" ></script>
 	
 	</body>

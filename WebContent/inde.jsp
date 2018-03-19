@@ -76,7 +76,7 @@
 				  </ul>
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
+			   <li><a href='/experience'><span>| 摄影经验分享 |</span></a></li>
 			</ul>
 		</div>
 		

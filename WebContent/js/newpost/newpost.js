@@ -11,7 +11,7 @@ document.getElementById('file').onchange = function() {
 
 // 上传数据
 function check() {
-	if($("#name").val()==null||$("#message").val()==null||$("#file").val()==""){
+	if($("#name").val()==""||$("#message").val()==""||$("#file").val()==""){
 		alert("请完善信息");
 		return false;
 	}

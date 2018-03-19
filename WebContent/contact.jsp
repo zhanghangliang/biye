@@ -35,7 +35,7 @@
 				  </ul>
 			   </li>
 			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='/single'><span>| 摄影经验分享 |</span></a></li>
+			   <li><a href='/experience'><span>| 摄影经验分享 |</span></a></li>
 			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			   <li class='last' id="loginOut"><a href="/index1?search=all" onclick="loginOut()"><span>| 退出账户 |</span></a></li>
 			</ul>

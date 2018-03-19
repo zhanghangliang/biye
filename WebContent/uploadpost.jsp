@@ -56,10 +56,8 @@
 				<textarea id="message" name="message" placeholder="最大字数不超过200字" maxlength="200"></textarea> 
 			</label>
 			<center>
-				<label>
 					<br><span>&nbsp;</span>
 					<input type="submit">
-				</label>
 			</center>
 		</form>
 	<script type="text/javascript" src="js/jquery-2.1.1.js" ></script>

@@ -52,7 +52,7 @@ public class DetailInfoServiceImpl implements DetailInfoService{
 			/*
 			 * 此处地址写死
 			 */
-			CommonUtil.SaveFileFromInputStream(photo.getInputStream(), "E:/L&SWorkspace/LS/WebContent/images/photowall/"+user, stringRandom);
+			CommonUtil.SaveFileFromInputStream(photo.getInputStream(), CommonUtil.showImgPath()+"photowall/"+user, stringRandom);
 			mapper.updateByUseridAndWhich("photo"+which, "images/photowall/"+user+"/"+stringRandom, user);
 			return "wait";
 		} catch (Exception e) {

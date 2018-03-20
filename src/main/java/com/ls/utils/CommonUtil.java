@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
@@ -103,4 +106,30 @@ public class CommonUtil {
 		String s = sdf.format(now);
 		return sdf.parse(s);
 	}
+	
+	/**
+	 * 获取request中cookie的userid
+	 */
+	public static Integer getUserID(HttpServletRequest request) {
+		Cookie[] cookies = request.getCookies();
+		if(cookies!=null){
+			for(Cookie cookie:cookies){
+				 if ("loginUserid".equals(cookie.getName())) {
+					 return Integer.parseInt(cookie.getValue());
+				 }
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * 返回图片img储存位置
+	 */
+	public static String showImgPath() throws Exception {
+        File directory = new File("");// 参数为空
+        String courseFile = directory.getCanonicalPath();
+        courseFile = courseFile.replace("\\", "/");    
+//		return courseFile+"/WebContent/images/";
+        return "E:/L&SWorkspace/LS/WebContent/images/";
+    }
 }

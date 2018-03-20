@@ -15,7 +15,7 @@
 					<meta http-equiv="refresh" content="3;url=/index1?search=all">
 				</c:when>
 				<c:when test="${message =='wait'}">
-					<center><span style="font-size:24px;font-weight:600;">上传照片墙正在审核中，先逛逛首页吧</span></center>
+					<center><span style="font-size:24px;font-weight:600;">正在审核中，先逛逛首页吧</span></center>
 					<center><span style="font-size:20px;font-weight:600;"><br><br>即将跳转到首页</span></center>
 					<meta http-equiv="refresh" content="3;url=/index1?search=all">
 				</c:when>

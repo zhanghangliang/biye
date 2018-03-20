@@ -43,7 +43,7 @@ public class NewPostServiceImpl implements NewPostService {
 			/*
 			 * 此处地址写死
 			 */
-			CommonUtil.SaveFileFromInputStream(post_file.getInputStream(), "E:/L&SWorkspace/LS/WebContent/images/newpost", stringRandom);
+			CommonUtil.SaveFileFromInputStream(post_file.getInputStream(), CommonUtil.showImgPath()+"newpost", stringRandom);
 			return "newpost/"+stringRandom;
 		} catch (Exception e) {
 			e.printStackTrace();

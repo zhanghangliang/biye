@@ -123,7 +123,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ls.entity.ExperienceBaseInfo" >
+  <insert id="insert" parameterType="com.ls.entity.ExperienceBaseInfo" useGeneratedKeys="true" keyProperty="experienceId">
     insert into experience_base_info (experience_id, user_id, experience_title, 
       experience_time, status, experience_content
       )

@@ -76,7 +76,7 @@
 	font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 .blue-sub {
-	background: #6d9eeb;
+	background: #6d9eeb!important;
 }
 .smart-green textarea {
 	height: 150px;

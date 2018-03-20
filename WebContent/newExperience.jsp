@@ -20,7 +20,7 @@
 
 </head>
 <body>
-	<div style="display:none" value="">这是存放expID的</div>
+	<div id="saveExpID"style="display:none" value="">这是存放expID的</div>
 	<div id='cssmenu'>
 		<ul>
 			<li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>

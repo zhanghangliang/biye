@@ -2,9 +2,6 @@ package com.ls.entity;
 
 import java.util.Date;
 
-import org.springframework.stereotype.Repository;
-
-@Repository
 public class ExperienceBaseInfo {
     private Integer experienceId;
 
@@ -13,6 +10,8 @@ public class ExperienceBaseInfo {
     private String experienceTitle;
 
     private Date experienceTime;
+
+    private Integer status;
 
     private String experienceContent;
 
@@ -46,6 +45,14 @@ public class ExperienceBaseInfo {
 
     public void setExperienceTime(Date experienceTime) {
         this.experienceTime = experienceTime;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public String getExperienceContent() {

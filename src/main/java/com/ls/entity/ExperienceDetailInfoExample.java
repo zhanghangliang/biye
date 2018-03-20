@@ -1,17 +1,16 @@
 package com.ls.entity;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class ExperienceBaseInfoExample {
+public class ExperienceDetailInfoExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public ExperienceBaseInfoExample() {
+    public ExperienceDetailInfoExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -165,253 +164,273 @@ public class ExperienceBaseInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNull() {
-            addCriterion("user_id is null");
+        public Criteria andOrderIdIsNull() {
+            addCriterion("order_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNotNull() {
-            addCriterion("user_id is not null");
+        public Criteria andOrderIdIsNotNull() {
+            addCriterion("order_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdEqualTo(Integer value) {
-            addCriterion("user_id =", value, "userId");
+        public Criteria andOrderIdEqualTo(Integer value) {
+            addCriterion("order_id =", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotEqualTo(Integer value) {
-            addCriterion("user_id <>", value, "userId");
+        public Criteria andOrderIdNotEqualTo(Integer value) {
+            addCriterion("order_id <>", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThan(Integer value) {
-            addCriterion("user_id >", value, "userId");
+        public Criteria andOrderIdGreaterThan(Integer value) {
+            addCriterion("order_id >", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("user_id >=", value, "userId");
+        public Criteria andOrderIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("order_id >=", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThan(Integer value) {
-            addCriterion("user_id <", value, "userId");
+        public Criteria andOrderIdLessThan(Integer value) {
+            addCriterion("order_id <", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
-            addCriterion("user_id <=", value, "userId");
+        public Criteria andOrderIdLessThanOrEqualTo(Integer value) {
+            addCriterion("order_id <=", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIn(List<Integer> values) {
-            addCriterion("user_id in", values, "userId");
+        public Criteria andOrderIdIn(List<Integer> values) {
+            addCriterion("order_id in", values, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotIn(List<Integer> values) {
-            addCriterion("user_id not in", values, "userId");
+        public Criteria andOrderIdNotIn(List<Integer> values) {
+            addCriterion("order_id not in", values, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdBetween(Integer value1, Integer value2) {
-            addCriterion("user_id between", value1, value2, "userId");
+        public Criteria andOrderIdBetween(Integer value1, Integer value2) {
+            addCriterion("order_id between", value1, value2, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("user_id not between", value1, value2, "userId");
+        public Criteria andOrderIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("order_id not between", value1, value2, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleIsNull() {
-            addCriterion("experience_title is null");
+        public Criteria andExperienceSubtitleIsNull() {
+            addCriterion("experience_subtitle is null");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleIsNotNull() {
-            addCriterion("experience_title is not null");
+        public Criteria andExperienceSubtitleIsNotNull() {
+            addCriterion("experience_subtitle is not null");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleEqualTo(String value) {
-            addCriterion("experience_title =", value, "experienceTitle");
+        public Criteria andExperienceSubtitleEqualTo(String value) {
+            addCriterion("experience_subtitle =", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleNotEqualTo(String value) {
-            addCriterion("experience_title <>", value, "experienceTitle");
+        public Criteria andExperienceSubtitleNotEqualTo(String value) {
+            addCriterion("experience_subtitle <>", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleGreaterThan(String value) {
-            addCriterion("experience_title >", value, "experienceTitle");
+        public Criteria andExperienceSubtitleGreaterThan(String value) {
+            addCriterion("experience_subtitle >", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleGreaterThanOrEqualTo(String value) {
-            addCriterion("experience_title >=", value, "experienceTitle");
+        public Criteria andExperienceSubtitleGreaterThanOrEqualTo(String value) {
+            addCriterion("experience_subtitle >=", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleLessThan(String value) {
-            addCriterion("experience_title <", value, "experienceTitle");
+        public Criteria andExperienceSubtitleLessThan(String value) {
+            addCriterion("experience_subtitle <", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleLessThanOrEqualTo(String value) {
-            addCriterion("experience_title <=", value, "experienceTitle");
+        public Criteria andExperienceSubtitleLessThanOrEqualTo(String value) {
+            addCriterion("experience_subtitle <=", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleLike(String value) {
-            addCriterion("experience_title like", value, "experienceTitle");
+        public Criteria andExperienceSubtitleLike(String value) {
+            addCriterion("experience_subtitle like", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleNotLike(String value) {
-            addCriterion("experience_title not like", value, "experienceTitle");
+        public Criteria andExperienceSubtitleNotLike(String value) {
+            addCriterion("experience_subtitle not like", value, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleIn(List<String> values) {
-            addCriterion("experience_title in", values, "experienceTitle");
+        public Criteria andExperienceSubtitleIn(List<String> values) {
+            addCriterion("experience_subtitle in", values, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleNotIn(List<String> values) {
-            addCriterion("experience_title not in", values, "experienceTitle");
+        public Criteria andExperienceSubtitleNotIn(List<String> values) {
+            addCriterion("experience_subtitle not in", values, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleBetween(String value1, String value2) {
-            addCriterion("experience_title between", value1, value2, "experienceTitle");
+        public Criteria andExperienceSubtitleBetween(String value1, String value2) {
+            addCriterion("experience_subtitle between", value1, value2, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTitleNotBetween(String value1, String value2) {
-            addCriterion("experience_title not between", value1, value2, "experienceTitle");
+        public Criteria andExperienceSubtitleNotBetween(String value1, String value2) {
+            addCriterion("experience_subtitle not between", value1, value2, "experienceSubtitle");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeIsNull() {
-            addCriterion("experience_time is null");
+        public Criteria andExperienceSubcontentIsNull() {
+            addCriterion("experience_subcontent is null");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeIsNotNull() {
-            addCriterion("experience_time is not null");
+        public Criteria andExperienceSubcontentIsNotNull() {
+            addCriterion("experience_subcontent is not null");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeEqualTo(Date value) {
-            addCriterion("experience_time =", value, "experienceTime");
+        public Criteria andExperienceSubcontentEqualTo(String value) {
+            addCriterion("experience_subcontent =", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeNotEqualTo(Date value) {
-            addCriterion("experience_time <>", value, "experienceTime");
+        public Criteria andExperienceSubcontentNotEqualTo(String value) {
+            addCriterion("experience_subcontent <>", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeGreaterThan(Date value) {
-            addCriterion("experience_time >", value, "experienceTime");
+        public Criteria andExperienceSubcontentGreaterThan(String value) {
+            addCriterion("experience_subcontent >", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("experience_time >=", value, "experienceTime");
+        public Criteria andExperienceSubcontentGreaterThanOrEqualTo(String value) {
+            addCriterion("experience_subcontent >=", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeLessThan(Date value) {
-            addCriterion("experience_time <", value, "experienceTime");
+        public Criteria andExperienceSubcontentLessThan(String value) {
+            addCriterion("experience_subcontent <", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeLessThanOrEqualTo(Date value) {
-            addCriterion("experience_time <=", value, "experienceTime");
+        public Criteria andExperienceSubcontentLessThanOrEqualTo(String value) {
+            addCriterion("experience_subcontent <=", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeIn(List<Date> values) {
-            addCriterion("experience_time in", values, "experienceTime");
+        public Criteria andExperienceSubcontentLike(String value) {
+            addCriterion("experience_subcontent like", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeNotIn(List<Date> values) {
-            addCriterion("experience_time not in", values, "experienceTime");
+        public Criteria andExperienceSubcontentNotLike(String value) {
+            addCriterion("experience_subcontent not like", value, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeBetween(Date value1, Date value2) {
-            addCriterion("experience_time between", value1, value2, "experienceTime");
+        public Criteria andExperienceSubcontentIn(List<String> values) {
+            addCriterion("experience_subcontent in", values, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andExperienceTimeNotBetween(Date value1, Date value2) {
-            addCriterion("experience_time not between", value1, value2, "experienceTime");
+        public Criteria andExperienceSubcontentNotIn(List<String> values) {
+            addCriterion("experience_subcontent not in", values, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNull() {
-            addCriterion("status is null");
+        public Criteria andExperienceSubcontentBetween(String value1, String value2) {
+            addCriterion("experience_subcontent between", value1, value2, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNotNull() {
-            addCriterion("status is not null");
+        public Criteria andExperienceSubcontentNotBetween(String value1, String value2) {
+            addCriterion("experience_subcontent not between", value1, value2, "experienceSubcontent");
             return (Criteria) this;
         }
 
-        public Criteria andStatusEqualTo(Integer value) {
-            addCriterion("status =", value, "status");
+        public Criteria andExperienceSubimgIsNull() {
+            addCriterion("experience_subimg is null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotEqualTo(Integer value) {
-            addCriterion("status <>", value, "status");
+        public Criteria andExperienceSubimgIsNotNull() {
+            addCriterion("experience_subimg is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThan(Integer value) {
-            addCriterion("status >", value, "status");
+        public Criteria andExperienceSubimgEqualTo(String value) {
+            addCriterion("experience_subimg =", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("status >=", value, "status");
+        public Criteria andExperienceSubimgNotEqualTo(String value) {
+            addCriterion("experience_subimg <>", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThan(Integer value) {
-            addCriterion("status <", value, "status");
+        public Criteria andExperienceSubimgGreaterThan(String value) {
+            addCriterion("experience_subimg >", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("status <=", value, "status");
+        public Criteria andExperienceSubimgGreaterThanOrEqualTo(String value) {
+            addCriterion("experience_subimg >=", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIn(List<Integer> values) {
-            addCriterion("status in", values, "status");
+        public Criteria andExperienceSubimgLessThan(String value) {
+            addCriterion("experience_subimg <", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotIn(List<Integer> values) {
-            addCriterion("status not in", values, "status");
+        public Criteria andExperienceSubimgLessThanOrEqualTo(String value) {
+            addCriterion("experience_subimg <=", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusBetween(Integer value1, Integer value2) {
-            addCriterion("status between", value1, value2, "status");
+        public Criteria andExperienceSubimgLike(String value) {
+            addCriterion("experience_subimg like", value, "experienceSubimg");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("status not between", value1, value2, "status");
+        public Criteria andExperienceSubimgNotLike(String value) {
+            addCriterion("experience_subimg not like", value, "experienceSubimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andExperienceSubimgIn(List<String> values) {
+            addCriterion("experience_subimg in", values, "experienceSubimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andExperienceSubimgNotIn(List<String> values) {
+            addCriterion("experience_subimg not in", values, "experienceSubimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andExperienceSubimgBetween(String value1, String value2) {
+            addCriterion("experience_subimg between", value1, value2, "experienceSubimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andExperienceSubimgNotBetween(String value1, String value2) {
+            addCriterion("experience_subimg not between", value1, value2, "experienceSubimg");
             return (Criteria) this;
         }
     }

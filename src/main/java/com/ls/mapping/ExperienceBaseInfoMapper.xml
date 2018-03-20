@@ -6,6 +6,7 @@
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="experience_title" property="experienceTitle" jdbcType="VARCHAR" />
     <result column="experience_time" property="experienceTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.ls.entity.ExperienceBaseInfo" extends="BaseResultMap" >
     <result column="experience_content" property="experienceContent" jdbcType="LONGVARCHAR" />
@@ -69,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    experience_id, user_id, experience_title, experience_time
+    experience_id, user_id, experience_title, experience_time, status
   </sql>
   <sql id="Blob_Column_List" >
     experience_content
@@ -124,10 +125,10 @@
   </delete>
   <insert id="insert" parameterType="com.ls.entity.ExperienceBaseInfo" >
     insert into experience_base_info (experience_id, user_id, experience_title, 
-      experience_time, experience_content
+      experience_time, status, experience_content
       )
     values (#{experienceId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{experienceTitle,jdbcType=VARCHAR}, 
-      #{experienceTime,jdbcType=TIMESTAMP}, #{experienceContent,jdbcType=LONGVARCHAR}
+      #{experienceTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{experienceContent,jdbcType=LONGVARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.ls.entity.ExperienceBaseInfo" >
@@ -145,6 +146,9 @@
       <if test="experienceTime != null" >
         experience_time,
       </if>
+      <if test="status != null" >
+        status,
+      </if>
       <if test="experienceContent != null" >
         experience_content,
       </if>
@@ -161,6 +165,9 @@
       </if>
       <if test="experienceTime != null" >
         #{experienceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="experienceContent != null" >
         #{experienceContent,jdbcType=LONGVARCHAR},
@@ -188,6 +195,9 @@
       <if test="record.experienceTime != null" >
         experience_time = #{record.experienceTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
       <if test="record.experienceContent != null" >
         experience_content = #{record.experienceContent,jdbcType=LONGVARCHAR},
       </if>
@@ -202,6 +212,7 @@
       user_id = #{record.userId,jdbcType=INTEGER},
       experience_title = #{record.experienceTitle,jdbcType=VARCHAR},
       experience_time = #{record.experienceTime,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=INTEGER},
       experience_content = #{record.experienceContent,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -212,7 +223,8 @@
     set experience_id = #{record.experienceId,jdbcType=INTEGER},
       user_id = #{record.userId,jdbcType=INTEGER},
       experience_title = #{record.experienceTitle,jdbcType=VARCHAR},
-      experience_time = #{record.experienceTime,jdbcType=TIMESTAMP}
+      experience_time = #{record.experienceTime,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -229,6 +241,9 @@
       <if test="experienceTime != null" >
         experience_time = #{experienceTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
       <if test="experienceContent != null" >
         experience_content = #{experienceContent,jdbcType=LONGVARCHAR},
       </if>
@@ -240,6 +255,7 @@
     set user_id = #{userId,jdbcType=INTEGER},
       experience_title = #{experienceTitle,jdbcType=VARCHAR},
       experience_time = #{experienceTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
       experience_content = #{experienceContent,jdbcType=LONGVARCHAR}
     where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
@@ -247,7 +263,8 @@
     update experience_base_info
     set user_id = #{userId,jdbcType=INTEGER},
       experience_title = #{experienceTitle,jdbcType=VARCHAR},
-      experience_time = #{experienceTime,jdbcType=TIMESTAMP}
+      experience_time = #{experienceTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER}
     where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
 </mapper>

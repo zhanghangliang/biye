@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.ls.dao.ExperienceCommentMapper" >
-  <resultMap id="BaseResultMap" type="com.ls.entity.ExperienceComment" >
-    <id column="comment_id" property="commentId" jdbcType="INTEGER" />
-    <result column="experience_id" property="experienceId" jdbcType="INTEGER" />
+<mapper namespace="com.ls.dao.ExperienceBarrageMapper" >
+  <resultMap id="BaseResultMap" type="com.ls.entity.ExperienceBarrage" >
+    <id column="experience_id" property="experienceId" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="comment_time" property="commentTime" jdbcType="TIMESTAMP" />
-    <result column="comment_content" property="commentContent" jdbcType="VARCHAR" />
-    <result column="comment_like" property="commentLike" jdbcType="INTEGER" />
+    <result column="exp_barrage" property="expBarrage" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,15 +65,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    comment_id, experience_id, user_id, comment_time, comment_content, comment_like
+    experience_id, user_id, exp_barrage
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ls.entity.ExperienceCommentExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ls.entity.ExperienceBarrageExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from experience_comment
+    from experience_barrage
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -87,96 +84,67 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from experience_comment
-    where comment_id = #{commentId,jdbcType=INTEGER}
+    from experience_barrage
+    where experience_id = #{experienceId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from experience_comment
-    where comment_id = #{commentId,jdbcType=INTEGER}
+    delete from experience_barrage
+    where experience_id = #{experienceId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.ls.entity.ExperienceCommentExample" >
-    delete from experience_comment
+  <delete id="deleteByExample" parameterType="com.ls.entity.ExperienceBarrageExample" >
+    delete from experience_barrage
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ls.entity.ExperienceComment" >
-    insert into experience_comment (comment_id, experience_id, user_id, 
-      comment_time, comment_content, comment_like
+  <insert id="insert" parameterType="com.ls.entity.ExperienceBarrage" >
+    insert into experience_barrage (experience_id, user_id, exp_barrage
       )
-    values (#{commentId,jdbcType=INTEGER}, #{experienceId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
-      #{commentTime,jdbcType=TIMESTAMP}, #{commentContent,jdbcType=VARCHAR}, #{commentLike,jdbcType=INTEGER}
+    values (#{experienceId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{expBarrage,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.ls.entity.ExperienceComment" >
-    insert into experience_comment
+  <insert id="insertSelective" parameterType="com.ls.entity.ExperienceBarrage" >
+    insert into experience_barrage
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="commentId != null" >
-        comment_id,
-      </if>
       <if test="experienceId != null" >
         experience_id,
       </if>
       <if test="userId != null" >
         user_id,
       </if>
-      <if test="commentTime != null" >
-        comment_time,
-      </if>
-      <if test="commentContent != null" >
-        comment_content,
-      </if>
-      <if test="commentLike != null" >
-        comment_like,
+      <if test="expBarrage != null" >
+        exp_barrage,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="commentId != null" >
-        #{commentId,jdbcType=INTEGER},
-      </if>
       <if test="experienceId != null" >
         #{experienceId,jdbcType=INTEGER},
       </if>
       <if test="userId != null" >
         #{userId,jdbcType=INTEGER},
       </if>
-      <if test="commentTime != null" >
-        #{commentTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="commentContent != null" >
-        #{commentContent,jdbcType=VARCHAR},
-      </if>
-      <if test="commentLike != null" >
-        #{commentLike,jdbcType=INTEGER},
+      <if test="expBarrage != null" >
+        #{expBarrage,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.ls.entity.ExperienceCommentExample" resultType="java.lang.Integer" >
-    select count(*) from experience_comment
+  <select id="countByExample" parameterType="com.ls.entity.ExperienceBarrageExample" resultType="java.lang.Integer" >
+    select count(*) from experience_barrage
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update experience_comment
+    update experience_barrage
     <set >
-      <if test="record.commentId != null" >
-        comment_id = #{record.commentId,jdbcType=INTEGER},
-      </if>
       <if test="record.experienceId != null" >
         experience_id = #{record.experienceId,jdbcType=INTEGER},
       </if>
       <if test="record.userId != null" >
         user_id = #{record.userId,jdbcType=INTEGER},
       </if>
-      <if test="record.commentTime != null" >
-        comment_time = #{record.commentTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.commentContent != null" >
-        comment_content = #{record.commentContent,jdbcType=VARCHAR},
-      </if>
-      <if test="record.commentLike != null" >
-        comment_like = #{record.commentLike,jdbcType=INTEGER},
+      <if test="record.expBarrage != null" >
+        exp_barrage = #{record.expBarrage,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -184,45 +152,30 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update experience_comment
-    set comment_id = #{record.commentId,jdbcType=INTEGER},
-      experience_id = #{record.experienceId,jdbcType=INTEGER},
+    update experience_barrage
+    set experience_id = #{record.experienceId,jdbcType=INTEGER},
       user_id = #{record.userId,jdbcType=INTEGER},
-      comment_time = #{record.commentTime,jdbcType=TIMESTAMP},
-      comment_content = #{record.commentContent,jdbcType=VARCHAR},
-      comment_like = #{record.commentLike,jdbcType=INTEGER}
+      exp_barrage = #{record.expBarrage,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ls.entity.ExperienceComment" >
-    update experience_comment
+  <update id="updateByPrimaryKeySelective" parameterType="com.ls.entity.ExperienceBarrage" >
+    update experience_barrage
     <set >
-      <if test="experienceId != null" >
-        experience_id = #{experienceId,jdbcType=INTEGER},
-      </if>
       <if test="userId != null" >
         user_id = #{userId,jdbcType=INTEGER},
       </if>
-      <if test="commentTime != null" >
-        comment_time = #{commentTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="commentContent != null" >
-        comment_content = #{commentContent,jdbcType=VARCHAR},
-      </if>
-      <if test="commentLike != null" >
-        comment_like = #{commentLike,jdbcType=INTEGER},
+      <if test="expBarrage != null" >
+        exp_barrage = #{expBarrage,jdbcType=VARCHAR},
       </if>
     </set>
-    where comment_id = #{commentId,jdbcType=INTEGER}
+    where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ls.entity.ExperienceComment" >
-    update experience_comment
-    set experience_id = #{experienceId,jdbcType=INTEGER},
-      user_id = #{userId,jdbcType=INTEGER},
-      comment_time = #{commentTime,jdbcType=TIMESTAMP},
-      comment_content = #{commentContent,jdbcType=VARCHAR},
-      comment_like = #{commentLike,jdbcType=INTEGER}
-    where comment_id = #{commentId,jdbcType=INTEGER}
+  <update id="updateByPrimaryKey" parameterType="com.ls.entity.ExperienceBarrage" >
+    update experience_barrage
+    set user_id = #{userId,jdbcType=INTEGER},
+      exp_barrage = #{expBarrage,jdbcType=VARCHAR}
+    where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
 </mapper>

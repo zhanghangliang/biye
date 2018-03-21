@@ -23,36 +23,41 @@
 
 <link rel="stylesheet" href="css/lightbox.css">
 
-<!-- 仿微博评论功能 -->
-<link rel="stylesheet" href="css/pinglun/style.css">
-<link rel="stylesheet" href="css/pinglun/comment.css">
-
 <!-- 右侧评论框 -->
 <link rel="stylesheet" href="css/single/swiper.min.css">
 <link rel="stylesheet" href="css/single/barrage.css">
+
+    <!-- 按钮美化 -->
+    <link rel="stylesheet" type="text/css" href="css/button/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/vicons-font.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/buttons.css" />
 
 </head>
 <body>
 
 	<div class="header">
-		<div id='cssmenu'>
+		<div id='cssmenu' >
 			<ul>
-				<li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
-				<li class=' has-sub'><a href='#'><span>Category</span></a>
-					<ul>
-						<li class='has-sub'><a href='#'><span>Item 1</span></a>
-							<ul>
-								<li><a href='#'><span>Sub Item</span></a></li>
-								<li class='last'><a href='#'><span>Sub Item</span></a></li>
-							</ul></li>
-						<li class='has-sub'><a href='#'><span>Item 2</span></a>
-							<ul>
-								<li><a href='#'><span>Sub Item</span></a></li>
-								<li class='last'><a href='#'><span>Sub Item</span></a></li>
-							</ul></li>
-					</ul></li>
-				<li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-				<li><a href='/experience'><span>| 摄影经验分享 |</span></a></li>
+			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
+			   <li id="Exp" class=' has-sub'><a href="#"><span>| 经验分享专区 |</span></a>
+				  <ul>
+					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp随便看看</span></a>
+						<ul>
+						   <li id="Exp1">
+						   </li>
+						</ul>
+					 </li>
+					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp大师专区</span></a>
+						<ul>
+						   <li id="Exp2">
+						   </li>
+						</ul>
+					 </li>
+				  </ul>
+			   </li>
+			   <li><a href="/newpost"><span>| 个人作品上传 |</span></a></li>
+			   <li><a href='/newExperience'><span>| 摄影经验分享 |</span></a></li>
 				<li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
@@ -130,47 +135,18 @@
 		</div>
 	</div>
 	
-	<!-- 右侧评论框 -->
-	<div class="NYwishes">
-		<h2>图片评论</h2>
-		<div class="swiper-container">
-			<div id="conts">
-				<div class="dm">
-					<!--d_screen start-->
-					<div class="d_screen">
-						<div class="d_show">
-						<jsp:useBean id="time" class="java.util.Date"/>  
-							<div><center><fmt:formatDate value="<%=time%>" pattern="yyyy-MM-dd HH:mm:ss"/></center></div>
-							<div><center>Light & Shadow</center></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="send">
-			<div class="input">
-				<input id="reply-write" name="content" type="text" value=""
-					placeholder="分享你的感受">
-			</div>
-			<div class="send-btn">
-				<a onClick="send_reply2()">发送</a>
-			</div>
-		</div>
-	</div>
-	
 	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
 
 	<script src="js/lightbox-plus-jquery.min.js"></script>
 
 	<!-- Menu -->
 	<script src="js/script.js"></script>
-
-	<!-- 仿微博评论功能 -->
-	<script type="text/javascript" src="js/pinglun/jquery.flexText.js"></script>
-	<script type="text/javascript" src="js/pinglun/pinglun.js"></script>
 	
 	<!-- 右侧评论框 -->
 	<script type="text/javascript" src="js/single/swiper.min.js"></script>
 	<script type="text/javascript" src="js/single/barrage.js"></script>
+	
+	<!-- Exp -->
+	<script type="text/javascript" src="js/exp/loadExp.js" ></script>
 </body>
 </html>

@@ -28,7 +28,7 @@ function firstcheck() {
 	$("#"+id[0]).ajaxSubmit({
 		 dataType:"text",
 		 error:function(result){alert("网络不稳定，请稍后尝试");window.location="/index1?search=all"},
-		 success:function(result){alert(result);$("#saveExpID").attr("value",result);}
+		 success:function(result){$("#saveExpID").attr("value",result);}
 	});
 	addForm();
 	return false;

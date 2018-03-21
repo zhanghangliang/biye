@@ -12,30 +12,36 @@
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 
+    <!-- 按钮美化 -->
+    <link rel="stylesheet" type="text/css" href="css/button/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/vicons-font.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/button/buttons.css" />
+	
 </head>
 <body>
 	<div class="header">
 		<div id='cssmenu' >
 			<ul>
 			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
-			   <li class=' has-sub'><a href="#"><span>Category</span></a>
+			   <li id="Exp" class=' has-sub'><a href="#"><span>| 经验分享专区 |</span></a>
 				  <ul>
-					 <li class='has-sub'><a href="#"><span>Sub Item</span></a>
+					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp随便看看</span></a>
 						<ul>
-						   <li><a href="#"><span>Sub Item</span></a></li>
-						   <li class='last'><a href="#"><span>Sub Item</span></a></li>
+						   <li id="Exp1">
+						   </li>
 						</ul>
 					 </li>
-					 <li class='has-sub'><a href="#"><span>Item 2</span></a>
+					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp大师专区</span></a>
 						<ul>
-						   <li><a href="#"><span>Sub Item</span></a></li>
-						   <li class='last'><a href="#"><span>Sub Item</span></a></li>
+						   <li id="Exp2">
+						   </li>
 						</ul>
 					 </li>
 				  </ul>
 			   </li>
-			   <li><a href="/newpost"><span>| 摄影作品上传 |</span></a></li>
-			   <li><a href='/experience'><span>| 摄影经验分享 |</span></a></li>
+			   <li><a href="/newpost"><span>| 个人作品上传 |</span></a></li>
+			   <li><a href='/newExperience'><span>| 摄影经验分享 |</span></a></li>
 			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			   <li class='last' id="loginOut"><a href="/index1?search=all" onclick="loginOut()"><span>| 退出账户 |</span></a></li>
 			</ul>
@@ -148,6 +154,9 @@
 <script type="text/javascript" src="js/cookie.js"></script>
 <script type="text/javascript" src="js/contact/person.js"></script>
 <script type="text/javascript" src="js/contact/photowall.js"></script>
+
+<!-- Exp -->
+	<script type="text/javascript" src="js/exp/loadExp.js" ></script>
 
 </body>
 </html>

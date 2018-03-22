@@ -33,4 +33,7 @@ public interface ExperienceBaseInfoMapper {
     int updateByPrimaryKeyWithBLOBs(ExperienceBaseInfo record);
 
     int updateByPrimaryKey(ExperienceBaseInfo record);
+    
+    //add
+    List<ExperienceBaseInfo> selectByStatus(@Param("status")Integer status,@Param("num")Integer num);
 }

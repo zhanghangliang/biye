@@ -2,7 +2,7 @@
 #cssmenu input {
 	border:0;
 	background-color:#FFFFFF;
-	margin:10px 0px 0px;
+	margin:20px 0px;
 }
 #cssmenu ul li ul li ul button{
 	font-weight:500!important;
@@ -143,6 +143,7 @@
   top: 0;
 }
 #cssmenu ul li ul li:hover > ul > li {
+  height:auto;
   max-height: 180px;
   position: relative;
 }

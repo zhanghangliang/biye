@@ -267,4 +267,8 @@
       status = #{status,jdbcType=INTEGER}
     where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
+  <select id="selectByStatus" resultMap="ResultMapWithBLOBs">
+  		SELECT * FROM `experience_base_info`  AS t1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(experience_id) FROM `experience_base_info`)) AS experience_id) AS t2 WHERE t1.experience_id >= t2.experience_id
+	AND status=#{status} ORDER BY t1.experience_id ASC LIMIT ${num}
+  </select>
 </mapper>

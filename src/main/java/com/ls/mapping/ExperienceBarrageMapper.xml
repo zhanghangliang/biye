@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ls.dao.ExperienceBarrageMapper" >
   <resultMap id="BaseResultMap" type="com.ls.entity.ExperienceBarrage" >
-    <id column="experience_id" property="experienceId" jdbcType="INTEGER" />
+    <result column="experience_id" property="experienceId" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="exp_barrage" property="expBarrage" jdbcType="VARCHAR" />
   </resultMap>
@@ -81,16 +81,6 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from experience_barrage
-    where experience_id = #{experienceId,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from experience_barrage
-    where experience_id = #{experienceId,jdbcType=INTEGER}
-  </delete>
   <delete id="deleteByExample" parameterType="com.ls.entity.ExperienceBarrageExample" >
     delete from experience_barrage
     <if test="_parameter != null" >
@@ -159,23 +149,5 @@
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ls.entity.ExperienceBarrage" >
-    update experience_barrage
-    <set >
-      <if test="userId != null" >
-        user_id = #{userId,jdbcType=INTEGER},
-      </if>
-      <if test="expBarrage != null" >
-        exp_barrage = #{expBarrage,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where experience_id = #{experienceId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.ls.entity.ExperienceBarrage" >
-    update experience_barrage
-    set user_id = #{userId,jdbcType=INTEGER},
-      exp_barrage = #{expBarrage,jdbcType=VARCHAR}
-    where experience_id = #{experienceId,jdbcType=INTEGER}
   </update>
 </mapper>

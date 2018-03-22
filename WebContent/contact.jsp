@@ -23,7 +23,7 @@
 	<div class="header">
 		<div id='cssmenu' >
 			<ul>
-			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
+			<li class="active"><a href='index1?search=all'><span style="word-spacing:3px">L i g h t  &  S h a d o w</span></a></li>
 			   <li id="Exp" class=' has-sub'><a href="#"><span>| 经验分享专区 |</span></a>
 				  <ul>
 					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp随便看看</span></a>

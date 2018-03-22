@@ -13,7 +13,6 @@ import com.ls.entity.ExperienceBaseInfo;
 import com.ls.entity.ExperienceBaseInfoExample;
 import com.ls.entity.ExperienceBaseInfoExample.Criteria;
 import com.ls.entity.ExperienceDetailInfo;
-import com.ls.entity.ExperienceDetailInfoExample;
 import com.ls.service.NewExpService;
 import com.ls.utils.CommonUtil;
 

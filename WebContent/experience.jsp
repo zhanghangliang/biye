@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,22 +16,30 @@
 
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/menu.css">
 
 <!-- Custom Fonts -->
-<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet"
+	href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+<link rel="stylesheet" href="css/lightbox.css">
+
+<!-- 右侧评论框 -->
+<link rel="stylesheet" href="css/single/swiper.min.css">
+<link rel="stylesheet" href="css/single/barrage.css">
 
     <!-- 按钮美化 -->
     <link rel="stylesheet" type="text/css" href="css/button/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/button/vicons-font.css" />
 	<link rel="stylesheet" type="text/css" href="css/button/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/button/buttons.css" />
-	
+
 </head>
 <body>
-	<div id='cssmenu' >
+
+	<div class="header">
+		<div id='cssmenu' >
 			<ul>
-			   <li class="active"><a href='index1?search=all'><span>L&nbspI&nbspG&nbspH&nbspT&nbsp&nbsp&amp&nbsp&nbspS&nbspH&nbspA&nbspD&nbspO&nbspW</span></a></li>
+			<li class="active"><a href='index1?search=all'><span style="word-spacing:3px">L i g h t  &  S h a d o w</span></a></li>
 			   <li id="Exp" class=' has-sub'><a href="#"><span>| 经验分享专区 |</span></a>
 				  <ul>
 					 <li class='has-sub'><a href="#"><span>&nbsp&nbsp&nbsp&nbsp随便看看</span></a>
@@ -49,16 +58,94 @@
 			   </li>
 			   <li><a href="/newpost"><span>| 个人作品上传 |</span></a></li>
 			   <li><a href='/newExperience'><span>| 摄影经验分享 |</span></a></li>
-			   <li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
+				<li class='last'><a href='/contact'><span>| 个人中心 |</span></a></li>
 			</ul>
 		</div>
+	</div>
+
+	<div id="page-content" class="sub-page">
+		<div class="container" id="${baseInfo.experienceId}">
+			<center>
+				<article>
+					<div class="content-item">
+						<h3 class="title-item">
+							<a href="#">${baseInfo.experienceTitle}</a>
+						</h3>
+						<div class="time">${time}</div>
+						<ul class="list-inline">
+							<li><a href="#"><i class="fa fa-eye"></i> 260</a></li>
+							<li><a href="#"><i class="fa fa-comment"></i> 260</a></li>
+							<li><a href="#"><i class="fa fa-heart"></i>260</a></li>
+							<li><a href="#"><i class="fa fa-share"></i> 260</a></li>
+						</ul>
+						<br>
+						<p class="info">${baseInfo.experienceContent}</p>
+						
+						<!-- 循环生成div -->
+						<c:choose>
+				            <c:when test="${not empty detailInfos}">
+				                <c:forEach items="${detailInfos}" var="detail" varStatus="vs">
+				                    <div>
+				                    	<h4 class="title-item">
+											<a href="#">${detail.experienceSubtitle}</a>
+										</h4>
+										<br>
+										<p class="info">${baseInfo.experienceContent}</p>
+										<a class="example-image-link"
+											href="http://localhost:8080/images/${detail.experienceSubimg}"
+											data-lightbox="example-set"> <img class="example-image"
+											src="http://localhost:8080/images/${detail.experienceSubimg}" alt="" /></a>
+				                    </div>
+				                </c:forEach>
+				            </c:when>
+				        </c:choose>
+						
+					</div>
+				</article>
+			</center>
+			</div>
+		</div>
+	</div>
+	
+	<div class="NYwishes">
+		<h2>图片评论</h2>
+		<div class="swiper-container">
+			<div id="conts">
+				<div class="dm">
+					<!--d_screen start-->
+					<div class="d_screen">
+						<div class="d_show">
+						<jsp:useBean id="time" class="java.util.Date"/>  
+							<div><center><fmt:formatDate value="<%=time%>" pattern="yyyy-MM-dd HH:mm:ss"/></center></div>
+							<div><center>Light & Shadow</center></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="send">
+			<div class="input">
+				<input id="reply-write" name="content" type="text" value=""
+					placeholder="分享你的感受">
+			</div>
+			<div class="send-btn">
+				<a onClick="send_reply2()">发送</a>
+			</div>
+		</div>
+	</div>
+	
 	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+
+	<script src="js/lightbox-plus-jquery.min.js"></script>
 
 	<!-- Menu -->
 	<script src="js/script.js"></script>
 	
+	<!-- 右侧评论框 -->
+	<script type="text/javascript" src="js/single/swiper.min.js"></script>
+	<script type="text/javascript" src="js/exp/ExpBarrage.js"></script>
+	
 	<!-- Exp -->
 	<script type="text/javascript" src="js/exp/loadExp.js" ></script>
-
 </body>
 </html>

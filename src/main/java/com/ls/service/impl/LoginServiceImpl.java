@@ -1,5 +1,6 @@
 package com.ls.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +33,10 @@ public class LoginServiceImpl implements LoginService{
 			}
 			return result.get(0).getUserId()+"_success1";
 		} else return "error";
+	}
+
+	@Override
+	public Date banTimeCheck(Integer userId) throws Exception {
+		return mapper.selectByPrimaryKey(userId).getLiftBanTime();
 	}
 }

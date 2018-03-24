@@ -1,4 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+#sysnote {
+	width:auto;
+	position: fixed;
+  	left: 0px;
+  	top: 45px;
+  	z-index:9999;
+  	background-color:rgba(88,105,120,0.9);
+  	color:#FFFFFF;
+  	font-size:17px;
+  	font-weight: 700;
+  	padding:10px 20px;
+}
+#sysnote i {
+	padding:0 0 0 10px;
+}
 #cssmenu input {
 	border:0;
 	background-color:#FFFFFF;

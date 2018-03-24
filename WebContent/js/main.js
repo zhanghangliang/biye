@@ -15,6 +15,12 @@ $(document).ready(function($) {
     }
    window.onload=function(){
 //		根据情况提示信息（1.系统设置中的公告  2.拦截器拦截后提示登录）
+	   	var date =[];
+	   	$.ajax({url:"/sysnote",dataType:"json",complete:function(data){date=eval("("+JSON.stringify(data)+")").responseJSON;
+	   		console.log(date);
+	   		$("body").append("<div id='sysnote'>系统公告："+date.noteContent+"</div>");
+			setTimeout("document.getElementById('sysnote').style.display='none'",5000);
+	   	}});
 //		根据用户显示按钮,登录注册(标签内hidden="hidden")
 	    if(getCookie('loginType')=="senior"){
 	    	$(".adminDelete").show();

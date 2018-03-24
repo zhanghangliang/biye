@@ -19,7 +19,7 @@ public class CommonUtil {
 	/**
      * 将对象转换成JSON格式的字符串 适用于单个对象(单个对象里可以包含List<T>)的转换
      */
-    public <T> String beanToJSONStr(T t) {
+    public static <T> String beanToJSONStr(T t) {
         String json = "";
         JsonConfig jsonConfig = new JsonConfig();
         jsonConfig.registerJsonValueProcessor(Date.class,

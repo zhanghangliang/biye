@@ -19,7 +19,7 @@ $(document).ready(function($) {
 	   	$.ajax({url:"/sysnote",dataType:"json",complete:function(data){date=eval("("+JSON.stringify(data)+")").responseJSON;
 	   		console.log(date);
 	   		$("body").append("<div id='sysnote'>系统公告："+date.noteContent+"</div>");
-			setTimeout("document.getElementById('sysnote').style.display='none'",5000);
+			setTimeout("document.getElementById('sysnote').style.display='none'",3000);
 	   	}});
 //		根据用户显示按钮,登录注册(标签内hidden="hidden")
 	    if(getCookie('loginType')=="senior"){

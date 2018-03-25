@@ -39,4 +39,10 @@ public class LoginServiceImpl implements LoginService{
 	public Date banTimeCheck(Integer userId) throws Exception {
 		return mapper.selectByPrimaryKey(userId).getLiftBanTime();
 	}
+
+	@Override
+	public Integer selectUserType(Integer userId) {
+			UserBaseInfo userBaseInfo = mapper.selectByPrimaryKey(userId);
+			return userBaseInfo.getType();
+	}
 }

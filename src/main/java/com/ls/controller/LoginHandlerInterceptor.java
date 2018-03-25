@@ -39,14 +39,14 @@ public class LoginHandlerInterceptor implements HandlerInterceptor{
 				 System.out.println(cookie.getName()+"------"+cookie.getValue());
 				 if ("loginUserid".equals(cookie.getName())) {
 					Date liftBanTime = loginServiceImpl.banTimeCheck(Integer.parseInt(cookie.getValue()));
-					if (liftBanTime.compareTo(CommonUtil.nowTime())<=0) {
-						return true;
-					} else {
-//						arg0.getRequestDispatcher("/banTime?time="+CommonUtil.timeparse(liftBanTime)).forward(arg0, arg1);
-						arg1.sendRedirect("/banTime?time="+CommonUtil.timeparse(liftBanTime));
-//						arg1.sendRedirect("/ban.jsp");
-						return false;
-					}
+					if (liftBanTime!=null) {
+						if (liftBanTime.compareTo(CommonUtil.nowTime())<=0) {
+							return true;
+						} else {
+							arg1.sendRedirect("/banTime?time="+CommonUtil.timeparse(liftBanTime));
+							return false;
+						}
+					}else return true;
 				}
 			}
 		}

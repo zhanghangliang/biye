@@ -70,9 +70,6 @@
 
   <div id="right-side">
 	<div id="first" class="active">
-		
-		
-		
 	</div>
 	
 	
@@ -132,7 +129,6 @@
 		</div>
 	</div>
 	
-	
 	<div id="fourth">
 	  <div class="icon big">
 		<svg viewBox="0 0 32 32">
@@ -142,9 +138,9 @@
 		</svg>
 	  </div>
 
-	  <h1>Ship it</h1>
+	  <h1>个人简介</h1>
 
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+	  <p>大家很容易在网络或各类摄影书籍，学习到正统摄影技术。但正所谓理论是死，摄影是活的，很多技巧都要经验累积和自我判断才能拍到张出色相片。若新手想提升摄影技术，不妨参考一下我的文章哦~</p>
 
 	</div>
   </div>

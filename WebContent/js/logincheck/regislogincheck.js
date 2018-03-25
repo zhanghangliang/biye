@@ -87,8 +87,14 @@ function acpwdcheck(){
 				setCookie('loginUserid',words[0],1);
 				setCookie('loginUser',$("#loginac").val(),1);
 				setCookie('loginType','senior',1);
-				alert("你好管理员："+$("#loginac").val());
-				window.location.href="index1?search=all";
+				var mymessage=confirm("你好管理员："+$("#loginac").val()+",是否前往管理界面?");
+				  if(mymessage==true)
+				  {  
+					  window.location.href="/checkManager";
+				  }else
+				  { 
+					  window.location.href="index1?search=all";
+				  }
 			}else {
 				alert("用户名密码错误");
 			}

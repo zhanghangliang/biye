@@ -6,6 +6,6 @@ import com.ls.entity.PostBaseInfo;
 import com.ls.entity.PostLike;
 
 public interface IndexSelectService {
-	public List<PostBaseInfo> selectFirst(String content);
+	public List<PostBaseInfo> selectFirst(String content,Integer limit);
 	public List<PostLike> selectLike(Integer postid);
 }

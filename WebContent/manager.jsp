@@ -50,9 +50,9 @@
 
 					<!-- Table -->
 					<div class="table">
-						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<table id="area" width="100%" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<th width="13"><input type="checkbox" class="checkbox" id="allcheck"/></th>
+								<th width="13"><input type="button" id="allcheck" value="全选"/></th>
 								<th>用户名</th>
 								<th>账号状态</th>
 								<th>账号类别</th>
@@ -62,26 +62,12 @@
 								<th>作品评论</th>
 								<th width="80" class="ac">查看发布作品</th>
 							</tr>
-							<c:forEach begin="0" end="7">
-			                   	<tr class="odd">
-									<td><input type="checkbox" class="checkbox" /></td>
-									<td><h3><a href="#">Lorem ipsum</a></h3></td>
-									<td>封号中</td>
-									<td>管理员</td>
-									<td>13</td>
-									<td>7</td>
-									<td>800</td>
-									<td>233</td>
-									<td><center><a href="#" class="ico edit">详情</a></center></td>
-								</tr>
-			                </c:forEach>
-			                
 						</table>
 						
 						
 						<!-- Pagging -->
 						<div class="pagging">
-							<div class="left">总计44条记录，当前展示1至8条</div>
+							<div class="left">总计 <i id="all">45</i> 条记录，当前展示 <i id="nowbegin">1</i> 至 <i id="nowend">8</i> 条</div>
 							<div class="right">
 								<a href="#">上一页</a>
 								<a href="#" onclick="choosePage()">当前页：4</a>
@@ -117,14 +103,14 @@
 					<div class="box-content">
 						<div class="cl">&nbsp;</div>
 						
-						<a href="#" class="add-button"><span>封三天</span></a>
-						<a href="#" class="add-button"><span>封十五天</span></a>
-						<a href="#" class="add-button"><span>永久封禁</span></a>
-						<a href="#" class="add-button"><span>账号解封</span></a>
+						<a href="#" class="add-button" onclick="ban(3)"><span>封三天</span></a>
+						<a href="#" class="add-button" onclick="ban(15)"><span>封十五天</span></a>
+						<a href="#" class="add-button" onclick="ban(9999)"><span>永久封禁</span></a>
+						<a href="#" class="add-button" onclick="ban(0)"><span>账号解封</span></a>
 						<c:choose>
 							<c:when test="${userType ==2}">
-								<a href="#" class="add-button"><span>权限更改</span></a>
-								<a href="#" class="add-button"><span>删除用户</span></a>
+								<a href="#" class="add-button" onclick="changeType(1)"><span>提为管理</span></a>
+								<a href="#" class="add-button" onclick="changeType(0)"><span>降为用户</span></a>
 							</c:when>	
 						</c:choose>
 						<div class="cl">&nbsp;</div>

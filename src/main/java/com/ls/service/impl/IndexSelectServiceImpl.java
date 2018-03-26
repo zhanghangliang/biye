@@ -23,8 +23,8 @@ public class IndexSelectServiceImpl implements IndexSelectService{
 	private PostLikeExample example;
 	
 	@Override
-	public List<PostBaseInfo> selectFirst(String content) {
-		List<PostBaseInfo> postBaseInfoByLimit = postBaseInfoMapper.selectPostBaseInfoByLimit(content);
+	public List<PostBaseInfo> selectFirst(String content,Integer limit) {
+		List<PostBaseInfo> postBaseInfoByLimit = postBaseInfoMapper.selectPostBaseInfoByLimit(content,limit);
 		for(int i=0;i<postBaseInfoByLimit.size();i++){
 			System.out.println(postBaseInfoByLimit.get(i).getPostTitle());
 		}

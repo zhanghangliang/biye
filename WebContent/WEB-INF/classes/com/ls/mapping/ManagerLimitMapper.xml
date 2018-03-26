@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ls.dao.ManagerLimitMapper" >
+	<resultMap id="BaseResultMap" type="com.ls.entity.ManagerInfo" >
+	    <id column="user_id" property="userId" jdbcType="INTEGER" />
+	    <result column="account" property="account" jdbcType="VARCHAR" />
+    	<result column="ban" property="ban" jdbcType="VARCHAR" />
+	    <result column="type" property="type" jdbcType="VARCHAR" />
+    	<result column="post_num" property="postNum" jdbcType="INTEGER" />
+    	<result column="exp_num" property="expNum" jdbcType="INTEGER" />
+    	<result column="post_barrage_num" property="postBarrageNum" jdbcType="INTEGER" />
+    	<result column="exp_barrage_num" property="expBarrageNum" jdbcType="INTEGER" />
+  	</resultMap>
+	<select id="selectManagerInfoByLimit" resultMap="BaseResultMap">
+	 	 SELECT cc.user_id, cc.account,  IF ( cc.lift_ban_time > now(), "封禁中", "正常" ) AS ban,  IF ( cc.type IS NULL, "普通用户", "管理员" ) AS type,  IF ( bb.post_num IS NULL, 0, bb.post_num ) AS post_num,  IF ( dd.exp_num IS NULL, 0, dd.exp_num ) AS exp_num,  IF ( ee.post_barrage_num IS NULL, 0, ee.post_barrage_num ) AS post_barrage_num,  IF ( ff.exp_barrage_num IS NULL, 0, ff.exp_barrage_num ) AS exp_barrage_num FROM user_base_info cc LEFT JOIN ( SELECT aa.* FROM ( SELECT a.user_id, a.account AS 用户名, COUNT(*) AS post_num FROM user_base_info A, post_base_info B WHERE A.user_id = B.user_id GROUP BY A.user_id ) AS aa ) AS bb ON cc.user_id = bb.user_id LEFT JOIN ( SELECT aa.* FROM ( SELECT a.user_id, COUNT(*) AS exp_num FROM user_base_info A, experience_base_info B WHERE A.user_id = B.user_id GROUP BY A.user_id ) AS aa ) AS dd ON cc.user_id = dd.user_id LEFT JOIN ( SELECT aa.* FROM ( SELECT a.user_id, COUNT(*) AS post_barrage_num FROM user_base_info A, post_barrage B WHERE A.user_id = B.user_id GROUP BY A.user_id ) AS aa ) AS ee ON cc.user_id = ee.user_id LEFT JOIN ( SELECT aa.* FROM ( SELECT a.user_id, COUNT(*) AS exp_barrage_num FROM user_base_info A, experience_barrage B WHERE A.user_id = B.user_id GROUP BY A.user_id ) AS aa ) AS ff ON cc.user_id = ff.user_id WHERE cc.type = 1 OR cc.type IS NULL LIMIT ${limit},8
+	</select>
+</mapper>

@@ -37,5 +37,5 @@ public interface PostBaseInfoMapper {
 
     int updateByPrimaryKey(PostBaseInfo record);
     
-    List<PostBaseInfo> selectPostBaseInfoByLimit(@Param("arg1") String arg1);
+    List<PostBaseInfo> selectPostBaseInfoByLimit(@Param("arg1") String arg1,@Param("arg2")Integer arg2);
 }

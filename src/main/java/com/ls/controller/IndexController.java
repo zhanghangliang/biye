@@ -26,13 +26,13 @@ public class IndexController {
         ModelAndView mv=new ModelAndView();
         if ("all".equals(content)) {
         	content = "想搜点什么呢....";
-        	selectFirst = indexSelectServiceImpl.selectFirst("%%");
+        	selectFirst = indexSelectServiceImpl.selectFirst("%%",0);
 		} else {
-			selectFirst = indexSelectServiceImpl.selectFirst("%"+content+"%");
+			selectFirst = indexSelectServiceImpl.selectFirst("%"+content+"%",0);
 			content = "当前搜索："+content;
 		}
         if (selectFirst.isEmpty()) {
-        	selectFirst = indexSelectServiceImpl.selectFirst("%%");
+        	selectFirst = indexSelectServiceImpl.selectFirst("%%",0);
 		}
         mv.addObject("searchtype", content);
         mv.addObject("selectFirst", selectFirst);

@@ -27,4 +27,6 @@ public interface UserBaseInfoMapper {
     int updateByPrimaryKeySelective(UserBaseInfo record);
 
     int updateByPrimaryKey(UserBaseInfo record);
+    
+    int updateTypeToNormalByUserID(@Param("userid")Integer userid);
 }

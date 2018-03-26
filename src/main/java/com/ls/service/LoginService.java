@@ -9,4 +9,12 @@ public interface LoginService {
 	public Date banTimeCheck(Integer userId) throws Exception;
 	//管理员，超管，普通用户判断
 	public Integer selectUserType(Integer userId);
+	//对账号进行封禁
+	public String updateBanTimeByUserID(Integer userId,Date liftBanTime);
+	//转换封禁时间
+	public Date conversionTime(Integer banType) throws Exception;
+	//提升为管理员
+	public String updateTypeByUser(Integer userId,Integer type);
+	//将管理员设为普通用户
+	public String updateTypeToNormalByUser(Integer userId);
 }

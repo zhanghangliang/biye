@@ -275,7 +275,7 @@
     <result column="post_time" property="postTime"/>
     <result column="post_intro" property="postIntro"/>
   </resultMap>
-  <select id="selectPostBaseInfoByLimit" resultMap="BaseMap" parameterType="java.lang.String">
-	  select * from post_base_info WHERE post_title LIKE #{arg1} limit 0,30
+  <select id="selectPostBaseInfoByLimit" resultMap="BaseMap">
+	  select * from post_base_info WHERE post_title LIKE #{arg1} limit ${arg2},30
   </select>
 </mapper>

@@ -21,4 +21,10 @@ public class SystemConfigController {
 		String beanToJSONStr = CommonUtil.beanToJSONStr(selectConfById);
 		return beanToJSONStr;
 	}
+	
+	@RequestMapping("/renote")
+	@ResponseBody
+	public String reNote(String note){
+		return systemConfServiceImpl.updateConfById(1, note);
+	}
 }

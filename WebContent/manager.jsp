@@ -55,28 +55,23 @@
 								<th width="13"><input type="checkbox" class="checkbox" id="allcheck"/></th>
 								<th>用户名</th>
 								<th>账号状态</th>
-								<th>上传作品数</th>
-								<th>摄影经验数</th>
-								<th>评论数</th>
-								<th width="110" class="ac">查看发布作品</th>
+								<th>账号类别</th>
+								<th>上传作品</th>
+								<th>摄影经验</th>
+								<th>经验评论</th>
+								<th>作品评论</th>
+								<th width="80" class="ac">查看发布作品</th>
 							</tr>
-							<c:forEach begin="0" end="3">
-			                   	<tr>
+							<c:forEach begin="0" end="7">
+			                   	<tr class="odd">
 									<td><input type="checkbox" class="checkbox" /></td>
 									<td><h3><a href="#">Lorem ipsum</a></h3></td>
-									<td>三天后解封22</td>
+									<td>封号中</td>
+									<td>管理员</td>
 									<td>13</td>
 									<td>7</td>
 									<td>800</td>
-									<td><center><a href="#" class="ico edit">详情</a></center></td>
-								</tr>
-								<tr class="odd">
-									<td><input type="checkbox" class="checkbox" /></td>
-									<td><h3><a href="#">Lorem ipsum</a></h3></td>
-									<td>三天后解封</td>
-									<td>13</td>
-									<td>22</td>
-									<td>211</td>
+									<td>233</td>
 									<td><center><a href="#" class="ico edit">详情</a></center></td>
 								</tr>
 			                </c:forEach>
@@ -138,7 +133,7 @@
 						<h2>系统设置</h2>
 					</div>
 					<div class="box-content">
-							<a href="#" class="add-button"><span>更新公告</span></a>
+							<a href="#" class="add-button" onclick="reNote()"><span>更新公告</span></a>
 						<div class="cl">&nbsp;</div>				
 					</div>
 					

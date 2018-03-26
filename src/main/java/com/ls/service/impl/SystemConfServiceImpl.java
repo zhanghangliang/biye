@@ -31,6 +31,7 @@ public class SystemConfServiceImpl implements SystemConfService{
 	public String updateConfById(Integer id,String noteContent) {
 		try {
 			SystemConf systemConf = new SystemConf();
+			systemConf.setNoteContent(noteContent);
 			Criteria criteria = example.createCriteria();
 			criteria.andInnerNoteEqualTo(id);
 			mapper.updateByExampleSelective(systemConf, example);
@@ -38,7 +39,7 @@ public class SystemConfServiceImpl implements SystemConfService{
 			return "success";
 		} catch (Exception e) {
 			e.printStackTrace();
-			return null;
+			return "error";
 		}
 	}
 

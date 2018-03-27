@@ -17,4 +17,6 @@ public interface LoginService {
 	public String updateTypeByUser(Integer userId,Integer type);
 	//将管理员设为普通用户
 	public String updateTypeToNormalByUser(Integer userId);
+	//获得用户总数
+	public Integer selectUserCount();
 }

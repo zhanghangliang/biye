@@ -3,7 +3,7 @@
 	width:auto;
 	position: fixed;
   	left: 0px;
-  	top: 45px;
+  	bottom: 0px;
   	z-index:9999;
   	background-color:rgba(88,105,120,0.9);
   	color:#FFFFFF;

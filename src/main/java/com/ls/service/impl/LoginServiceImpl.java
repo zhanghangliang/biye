@@ -97,4 +97,9 @@ public class LoginServiceImpl implements LoginService{
 		}
 		return "success";
 	}
+
+	@Override
+	public Integer selectUserCount() {
+		return mapper.countByExample(example);
+	}
 }

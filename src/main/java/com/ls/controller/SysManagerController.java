@@ -85,4 +85,10 @@ public class SysManagerController {
 			return "error";
 		}
 	}
+	
+	@RequestMapping("getUserCount")
+	@ResponseBody
+	public String getUserCount() {
+		return loginServiceImpl.selectUserCount().toString();
+	}
 }

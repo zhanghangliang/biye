@@ -41,9 +41,7 @@
 					<div class="box-head">
 						<h2 class="left">用户列表</h2>
 						<div class="right">
-							<label>查找指定用户</label>
-							<input type="text" class="field small-field" />
-							<input type="submit" class="button" value="搜索" onclick="showTip(1)"/>
+							<label>欢迎使用| 光影之间  |后台管理系统</label>
 						</div>
 					</div>
 					<!-- End Box Head -->	
@@ -67,12 +65,12 @@
 						
 						<!-- Pagging -->
 						<div class="pagging">
-							<div class="left">总计 <i id="all">45</i> 条记录，当前展示 <i id="nowbegin">1</i> 至 <i id="nowend">8</i> 条</div>
+							<div class="left">总计 <i id="all">45</i> 位用户</div>
 							<div class="right">
-								<a href="#">上一页</a>
-								<a href="#" onclick="choosePage()">当前页：4</a>
-								<a href="#">下一页</a>
-								<a href="#">最后一页</a>
+								<a href="#" onclick="jumpPage('up')">上一页</a>
+								<a href="#" onclick="choosePage()">当前页：<i id="nowPage">1</i></a>
+								<a href="#" onclick="jumpPage('down')">下一页</a>
+								<a href="#" onclick="jumpPage('last')">最后一页</a>
 							</div>
 						</div>
 						<!-- End Pagging -->

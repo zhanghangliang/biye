@@ -35,8 +35,51 @@ function showTip(type) {
 	}
 }
 // 选择页数
+var zhengze = /^[0-9]+$/ ;
 function choosePage() {
-	var name = prompt("请输入页码(共" + 10 + "页)：", "");
+	var name = prompt("请输入页码(共" + Math.ceil(acnum / 8) + "页)：", "");
+	if (name <= Math.ceil(acnum / 8)&&name>0&&zhengze.test(name)) {
+		jumpPage(name);
+	} else {
+		showTip(2);
+	}
+}
+// 根据传入值调用相应函数(数字为页数，up为上一页，down为下一页，last为末页)
+function jumpPage(pageNum) {
+	if (pageNum == "up") {
+		if ($("#nowPage").text() == 1) {
+			alert("当前已为第一页");
+		} else {
+			jumpToPage(parseInt($("#nowPage").text()) - parseInt(1));
+		}
+	} else if (pageNum == "down") {
+		if ($("#nowPage").text() == Math.ceil(acnum / 8)) {
+			alert("当前已为最后一页");
+		} else {
+			jumpToPage(parseInt($("#nowPage").text()) + parseInt(1));
+		}
+	} else if (pageNum == "last") {
+		if ($("#nowPage").text() == Math.ceil(acnum / 8)) {
+			alert("当前已为最后一页");
+		} else {
+			jumpToPage(Math.ceil(acnum / 8));
+		}
+	} else {
+		if($("#nowPage").text()==pageNum){
+			alert("当前已为所选页");
+		} else {
+			jumpToPage(pageNum);
+		}
+	}
+}
+// 获取所选页面数据
+function jumpToPage(jumpTo) {
+	limit = jumpTo*8-8;
+	reArea();
+	getUser();
+	countUser();
+	$("#nowPage").text(jumpTo);
+	showTip(1);
 }
 // 获取所有checkbox状态
 function getCheckbox() {
@@ -60,6 +103,8 @@ function ban(bantype) {
 		banType : bantype
 	}, function(data, status) {
 		if (data == "success") {
+			jumpToPage($("#nowPage").text());
+			reArea();
 			showTip(1);
 		} else {
 			showTip(2);
@@ -67,8 +112,8 @@ function ban(bantype) {
 	})
 	recheck();
 }
-//提升与降低权限
-function changeType(accType){
+// 提升与降低权限
+function changeType(accType) {
 	var list = getCheckbox();
 	if (list == "" || list == undefined || list == null || list == "[]") {
 		alert("请选择进行该操作的用户");
@@ -80,6 +125,8 @@ function changeType(accType){
 		accType : accType
 	}, function(data, status) {
 		if (data == "success") {
+			jumpToPage($("#nowPage").text());
+			reArea();
 			showTip(1);
 		} else {
 			showTip(2);
@@ -106,7 +153,7 @@ function reNote() {
 }
 // 请求分页并渲染页面
 var limit = 0;
-function getUser(num) {
+function getUser() {
 	$
 			.ajax({
 				url : "/getUserLimit",
@@ -138,12 +185,26 @@ function getUser(num) {
 												+ '</td> <td>'
 												+ date[i].expBarrageNum
 												+ '</td> <td><center><a href="#" class="ico edit">详情</a></center></td> </tr>');
+						
 					}
 				}
 			});
 }
+//初始化用户展示区域
+function reArea(){
+	$("#area").children().remove();
+	$("#area").append('<tr> <th width="13"><input type="button" id="allcheck" value="全选"/></th> <th>用户名</th> <th>账号状态</th> <th>账号类别</th> <th>上传作品</th> <th>摄影经验</th> <th>经验评论</th> <th>作品评论</th> <th width="80" class="ac">查看发布作品</th> </tr>');
+}
+// 获得用户总数
+var acnum = 0;
+function countUser() {
+	$.post("/getUserCount", function(data, status) {
+		$("#all").text(data - 1);
+		acnum = data - 1;
+	})
+}
 // 页面加载完毕后，进行user分页初始化
 $(function() {
-	$("#nowbegin").text("45");
+	countUser();
 	getUser(limit);
 });

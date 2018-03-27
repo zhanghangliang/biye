@@ -36,4 +36,13 @@ public class BarrageServiceImpl implements BarrageService{
 		postBarrage.setUserId(userid);
 		mapper.insert(postBarrage);
 	}
+
+	@Override
+	public Integer deleteBarrageByPostID(Integer postID) {
+		Criteria criteria = example.createCriteria();
+		criteria.andPostIdEqualTo(postID);
+		int deleteByExample = mapper.deleteByExample(example);
+		example.clear();
+		return deleteByExample;
+	}
 }

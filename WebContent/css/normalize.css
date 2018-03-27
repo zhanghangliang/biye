@@ -438,3 +438,33 @@ img:hover { transform:rotate(0deg); transform:scale(1.8); box-shadow: 6px 6px 6p
 .photowallimg:hover {
 	background-color: #80A24A;
 }
+/* 个人资料  */
+.one {
+	width:33%;
+	height:100%;
+	background:rgba(0,250,154,0.15);
+}
+.two {
+	width:33%;
+	height:100%;
+	background:rgba(0,255,127,0.15);
+}
+.three {
+	width:33%;
+	height:100%;
+	background:rgba(60,179,113,0.15);
+}
+#third center {
+	font-size:26px;
+	font-weight: 700;
+	margin:20px;
+}
+.bott {
+	font-size:20px;
+	color: red;
+	font-weight: 700;
+	position:relative;  
+    left:40%;
+    top:35%;
+    letter-spacing:10px;
+}

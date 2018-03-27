@@ -40,4 +40,13 @@ public class IndexSelectServiceImpl implements IndexSelectService{
 		return selectByExample;
 	}
 
+	@Override
+	public Integer deleteLikeByPostID(Integer postID) {
+		Criteria criteria = example.createCriteria();
+		criteria.andPostIdEqualTo(postID);
+		int deleteByExample = mapper.deleteByExample(example);
+		example.clear();
+		return deleteByExample;
+	}
+
 }

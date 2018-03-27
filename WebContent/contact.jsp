@@ -59,13 +59,13 @@
   <div id="left-side">
 	<ul>
 	  <li class="choose active">
-		个人资料
-	  </li>
-	  <li class="pay">
 		照片墙预览
 	  </li>
-	  <li class="wrap">
+	  <li class="pay">
 		信息管理
+	  </li>
+	  <li class="wrap">
+		个人统计
 	  </li>
 	  <li class="ship">
 		个性展示
@@ -79,11 +79,7 @@
 
   <div id="right-side">
 	<div id="first" class="active">
-	</div>
-	
-	
-	<div id="second">
-	  <input class="photowallimg" type="button" value="更改说明" onclick=note()>
+		<input class="photowallimg" type="button" value="更改说明" onclick=note()>
 	  <fieldset>
 		<legend class="title">
 			照片墙
@@ -110,10 +106,14 @@
 	  	<input id="which" type="text" name="which" style="display: none"/>
 	  	<input id="wallpush" type="submit" style="display: none"/>
 	  </form>
+	
+	
+		
 	</div>
 	
-	<div id="third">
-		<div id="testleft">
+	
+	<div id="second">
+	  <div id="testleft">
 		<form action="/detailInfo" method="post">
 			<span class='baseInf'>昵&nbsp&nbsp称&nbsp&nbsp
 				<input type="text" value="${User.name}" name="cutename" placeholder="昵称限8字以内" required>
@@ -136,6 +136,12 @@
 			<input class="rightButton" type="submit" value=" 提交信息 "/>
 		</form>
 		</div>
+	</div>
+	
+	<div id="third">
+		<div class="one"><center>个人作品数</center><div class="bott">8篇</div></div>
+		<div class="two"><center>个人摄影数</center><div class="bott">2篇</div></div>
+		<div class="three"><center>个人评论数</center><div class="bott">34条</div></div>
 	</div>
 	
 	<div id="fourth">

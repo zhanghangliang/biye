@@ -33,4 +33,9 @@ public class SinglePostServiceImpl implements SinglePostService{
 		example.clear();
 		return postLike;
 	}
+
+	@Override
+	public Integer deleteByPostID(Integer postID) {
+		return postBaseInfoMapper.deleteByPrimaryKey(postID);
+	}
 }

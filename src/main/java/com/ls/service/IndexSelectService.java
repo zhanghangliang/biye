@@ -8,4 +8,5 @@ import com.ls.entity.PostLike;
 public interface IndexSelectService {
 	public List<PostBaseInfo> selectFirst(String content,Integer limit);
 	public List<PostLike> selectLike(Integer postid);
+	public Integer deleteLikeByPostID(Integer postID);
 }

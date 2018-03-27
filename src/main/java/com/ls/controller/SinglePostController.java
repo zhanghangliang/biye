@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ls.entity.PostBaseInfo;
 import com.ls.entity.PostLike;
 import com.ls.service.impl.BarrageServiceImpl;
+import com.ls.service.impl.IndexSelectServiceImpl;
 import com.ls.service.impl.SinglePostServiceImpl;
 import com.ls.utils.CommonUtil;
 
@@ -25,6 +26,8 @@ public class SinglePostController {
 	private SinglePostServiceImpl singlePostServiceImpl;
 	@Autowired
 	private BarrageServiceImpl barrageServiceImpl;
+	@Autowired
+	private IndexSelectServiceImpl indexSelectServiceImpl;
 
 	@RequestMapping(value = "/single", method = RequestMethod.GET)
 	public ModelAndView list(@RequestParam("postid") Integer postID) throws ParseException {
@@ -59,6 +62,15 @@ public class SinglePostController {
 				}
 			}
 		}
+	}
+	
+	@RequestMapping("/delByPostID")
+	@ResponseBody
+	public String delByPostID(@RequestParam("postid")Integer postid) {
+		System.out.println(postid);
+		indexSelectServiceImpl.deleteLikeByPostID(postid);
+		barrageServiceImpl.deleteBarrageByPostID(postid);
+		return singlePostServiceImpl.deleteByPostID(postid).toString();
 	}
 }
 

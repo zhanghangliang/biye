@@ -12,8 +12,8 @@ if ($.trim(content) == "") {
 	var text=$("#reply-write").val();
 	input(text)
 	$("#reply-write").val("");
-   	init_screen();  
    	if($(".d_show").height()>180){
+   		init_screen();  
 		$($(".d_show").children("div").get(0)).toggle(1000);
 		$($(".d_show").children("div").get(0)).remove();
 	}

@@ -25,7 +25,7 @@ public class ExperienceController {
 	private SingleExpServiceImpl singleExpServiceImpl;
 	@Autowired
 	private ExpBarrageServiceImpl expBarrageServiceImpl;
-	
+//	跳转单个经验分享界面
 	@RequestMapping(value="/experience",method=RequestMethod.GET)
     public ModelAndView toExperience(@RequestParam("expID")Integer expID)
     {
@@ -42,7 +42,7 @@ public class ExperienceController {
         mv.addObject("time",s);
         return mv;
     }
-	
+//	获取经验评论
 	@RequestMapping(value = "/getExpBarrage", method = RequestMethod.GET)
 	@ResponseBody
 	public String getExpBarrage(@RequestParam("expID")Integer expID) {
@@ -50,7 +50,7 @@ public class ExperienceController {
 		System.out.println(beanListToJSONStr);
 		return beanListToJSONStr;
 	}
-	
+//	上传新经验评论
 	@RequestMapping("/newExpBarrage")
 	public void newExpBarrage(HttpServletRequest request, @RequestParam("barrage") String barrage,
 			@RequestParam("expID") Integer expID) {

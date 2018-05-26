@@ -55,7 +55,7 @@ public class NewExperienceController {
         System.out.println(System.getProperty("java.class.path"));
 
     }
-	
+//	跳转上传经验界面
 	@RequestMapping("/newExperience")
 	public ModelAndView toExperience() throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -63,7 +63,7 @@ public class NewExperienceController {
 		mv.setViewName("/newExperience");
 		return mv;
 	}
-
+//	上传经验第一部分
 	@RequestMapping("firstCommit")
 	@ResponseBody
 	public String firstCommit(HttpServletRequest request, @RequestParam("name") String title,
@@ -75,7 +75,7 @@ public class NewExperienceController {
 		}
 		return result;
 	}
-
+//	上传经验副部分
 	@RequestMapping("elseCommit")
 	@ResponseBody
 	public String elseCommit(@RequestParam("orderID") Integer orderID, @RequestParam("name") String subtitle,
@@ -83,7 +83,7 @@ public class NewExperienceController {
 			@RequestParam("expID") Integer expID) throws Exception {
 		return newExpServiceImpl.insertElseCommit(orderID, expID, subtitle, subimg, subcontent);
 	}
-
+//	用户点击结束后，修改经验状态码
 	@RequestMapping(value="/finalCommit",method=RequestMethod.GET)
 	public ModelAndView finalCommit(@RequestParam("expID")Integer expID) {
 		ModelAndView mv = new ModelAndView();

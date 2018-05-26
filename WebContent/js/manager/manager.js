@@ -6,18 +6,24 @@ function loginOut() {
 }
 // 全选反选
 var checked = 0;
-$("#allcheck").click(function() {
+function allone() {
 	if (checked == 0) {
-		$(".checkbox").prop("checked", true);
+		$.each($('input:checkbox'), function() {
+			$(this).prop("checked", true);
+		});
 		checked = 1;
 	} else {
-		$(".checkbox").prop("checked", false);
+		$.each($('input:checkbox'), function() {
+			$(this).prop("checked", false);
+		});
 		checked = 0;
 	}
-});
+};
 // 初始化全选
 function recheck() {
-	$(".checkbox").prop("checked", false);
+	$.each($('input:checkbox'), function() {
+		$(this).prop("checked", false);
+	});
 	checked = 0;
 }
 // 显示成功(1)或失败(2)提示
@@ -193,7 +199,7 @@ function getUser() {
 //初始化用户展示区域
 function reArea(){
 	$("#area").children().remove();
-	$("#area").append('<tr> <th width="13"><input type="button" id="allcheck" value="全选"/></th> <th>用户名</th> <th>账号状态</th> <th>账号类别</th> <th>上传作品</th> <th>摄影经验</th> <th>经验评论</th> <th>作品评论</th> <th width="80" class="ac">查看发布作品</th> </tr>');
+	$("#area").append('<tr> <th width="13"><input type="button" id="allcheck" value="全选" onclick="allone()"/></th> <th>用户名</th> <th>账号状态</th> <th>账号类别</th> <th>上传作品</th> <th>摄影经验</th> <th>经验评论</th> <th>作品评论</th> <th width="80" class="ac">查看发布作品</th> </tr>');
 }
 // 获得用户总数
 var acnum = 0;

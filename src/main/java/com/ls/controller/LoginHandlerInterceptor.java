@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ls.service.impl.LoginServiceImpl;
 import com.ls.utils.CommonUtil;
-
+//SpringMVC拦截器调用，AOP判断是否被禁
 public class LoginHandlerInterceptor implements HandlerInterceptor{
 	@Autowired
 	private LoginServiceImpl loginServiceImpl;

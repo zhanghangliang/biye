@@ -13,7 +13,7 @@ import com.ls.utils.CommonUtil;
 public class SystemConfigController {
 	@Autowired
 	private SystemConfServiceImpl systemConfServiceImpl;
-	
+//	获取系统公告
 	@RequestMapping("/sysnote")
 	@ResponseBody
 	public String sysNote(){
@@ -21,7 +21,7 @@ public class SystemConfigController {
 		String beanToJSONStr = CommonUtil.beanToJSONStr(selectConfById);
 		return beanToJSONStr;
 	}
-	
+//	更改系统公告
 	@RequestMapping("/renote")
 	@ResponseBody
 	public String reNote(String note){

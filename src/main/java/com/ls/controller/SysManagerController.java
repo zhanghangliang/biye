@@ -21,7 +21,7 @@ public class SysManagerController {
 	private LoginServiceImpl loginServiceImpl;
 	@Autowired
 	private ManagerInfoServiceImpl managerInfoServiceImpl;
-	
+//	跳转管理页面前检查用户权限
 	@RequestMapping("checkManager")
 	public ModelAndView checkManager(HttpServletRequest request) {
 		ModelAndView mv =new ModelAndView();
@@ -41,7 +41,7 @@ public class SysManagerController {
 			return mv;
 		}
 	}
-	
+//	获取用户分页
 	@RequestMapping("getUserLimit")
 	@ResponseBody
 	public String getUserLimit(@RequestParam("limit")Integer limit) {
@@ -49,7 +49,7 @@ public class SysManagerController {
 		System.out.println(beanListToJSONStr);
 		return beanListToJSONStr;
 	}
-	
+//	封禁解封用户
 	@RequestMapping("banByType")
 	@ResponseBody
 	public String banByType(@RequestParam("banUserList")String banUserList,@RequestParam("banType")Integer banType) {
@@ -65,7 +65,7 @@ public class SysManagerController {
 			return "error";
 		}
 	}
-	
+//	更改用户权限
 	@RequestMapping("changeType")
 	@ResponseBody
 	public String changeType(@RequestParam("banUserList")String banUserList,@RequestParam("accType")Integer accType) {
@@ -84,7 +84,7 @@ public class SysManagerController {
 			return "error";
 		}
 	}
-	
+//	获取用户总数
 	@RequestMapping("getUserCount")
 	@ResponseBody
 	public String getUserCount() {

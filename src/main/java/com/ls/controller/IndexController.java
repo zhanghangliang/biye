@@ -18,7 +18,7 @@ import com.ls.service.impl.IndexSelectServiceImpl;
 public class IndexController {
 	@Autowired
 	private IndexSelectServiceImpl indexSelectServiceImpl;
-	
+//	跳转首页，根据不同搜索条件返回作品
 	@RequestMapping(value="/index1",method=RequestMethod.GET)
 	public ModelAndView list(@RequestParam("search")String content)
     {
@@ -39,7 +39,7 @@ public class IndexController {
         mv.setViewName("/inde");
         return mv;
     }
-	
+//	返回点赞数
 	@RequestMapping("/goodTime")
 	@ResponseBody
 	public String goodTime(@RequestParam("postid")Integer postid){

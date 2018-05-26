@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ls.service.impl.RegisServiceImpl;
-
+//注册检测账号是否存在
 @Controller
 @RequestMapping(value = "/regischeck", method = RequestMethod.POST)
 public class RegisCheckController {
@@ -23,7 +23,7 @@ public class RegisCheckController {
 		} else
 			return "error";
 	}
-
+//注册检测账号密码是否符合规则
 	@RequestMapping("/allcheck")
 	@ResponseBody
 	public String allcheck(@RequestParam("lsaccount") String lsaccount, @RequestParam("lspwd") String lspwd,

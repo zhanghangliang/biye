@@ -12,12 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ls.entity.UserDetailInfo;
 import com.ls.service.impl.DetailInfoServiceImpl;
-
+//个人中心
 @Controller
 public class DetailInfoController {
 	@Autowired
 	private DetailInfoServiceImpl detailInfoServiceImpl;
 	
+//	个人昵称信息修改
 	@RequestMapping("/detailInfo")
 	public ModelAndView saveDetailInfo(@RequestParam("cutename")String name,@RequestParam("sex")String sex,@RequestParam("email")String email,@RequestParam("personalProfile")String personalProfile,HttpServletRequest request)
     {
@@ -41,7 +42,7 @@ public class DetailInfoController {
         mv.setViewName("/message");
         return mv;
     }
-	
+	//跳转个人中心页面
 	@RequestMapping("/contact")
     public ModelAndView list(HttpServletRequest request)
     {
@@ -59,7 +60,7 @@ public class DetailInfoController {
         mv.setViewName("/contact");
         return mv;
     }
-	
+//	照片墙修改
 	@RequestMapping("/changeSinglePhoto")
     public ModelAndView changePhoto(HttpServletRequest request,@RequestParam("postimg")MultipartFile photo,@RequestParam("which")Integer which)
     {

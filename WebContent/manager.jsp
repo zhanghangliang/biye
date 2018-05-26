@@ -50,7 +50,7 @@
 					<div class="table">
 						<table id="area" width="100%" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<th width="13"><input type="button" id="allcheck" value="全选"/></th>
+								<th width="13"><input type="button" id="allcheck" value="全选" onclick="allone()"/></th>
 								<th>用户名</th>
 								<th>账号状态</th>
 								<th>账号类别</th>

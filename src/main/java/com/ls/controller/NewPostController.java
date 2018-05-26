@@ -28,7 +28,7 @@ public class NewPostController {
 		mv.setViewName("/uploadpost");
 		return mv;
 	}
-
+//	上传个人作品
 	@RequestMapping(value = "/checkpost")
 	@ResponseBody
 	public ModelAndView checkpost(HttpServletRequest request,@RequestParam("name") String post_title,

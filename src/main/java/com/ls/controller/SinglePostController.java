@@ -28,7 +28,7 @@ public class SinglePostController {
 	private BarrageServiceImpl barrageServiceImpl;
 	@Autowired
 	private IndexSelectServiceImpl indexSelectServiceImpl;
-
+//	跳转单个作品页面
 	@RequestMapping(value = "/single", method = RequestMethod.GET)
 	public ModelAndView list(@RequestParam("postid") Integer postID) throws ParseException {
 		ModelAndView mv = new ModelAndView();
@@ -41,7 +41,7 @@ public class SinglePostController {
 		mv.setViewName("/single");
 		return mv;
 	}
-
+//	返回作品评论
 	@RequestMapping(value = "/getBarrage", method = RequestMethod.GET)
 	@ResponseBody
 	public String getBarrage(@RequestParam("postid") Integer postid) {
@@ -49,7 +49,7 @@ public class SinglePostController {
 		System.out.println(beanListToJSONStr);
 		return beanListToJSONStr;
 	}
-
+//	上传新作品评论
 	@RequestMapping("/newBarrage")
 	public void newBarrage(HttpServletRequest request, @RequestParam("barrage") String barrage,
 			@RequestParam("postid") Integer postid) {
@@ -63,7 +63,7 @@ public class SinglePostController {
 			}
 		}
 	}
-	
+//	删除单个作品
 	@RequestMapping("/delByPostID")
 	@ResponseBody
 	public String delByPostID(@RequestParam("postid")Integer postid) {

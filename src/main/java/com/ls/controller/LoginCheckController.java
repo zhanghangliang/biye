@@ -14,13 +14,13 @@ import com.ls.service.impl.LoginServiceImpl;
 public class LoginCheckController {
 	@Autowired
 	private LoginServiceImpl loginServiceImpl;
-	
+//	判断登录时输入的密码账号
 	@RequestMapping("/logincheck")
 	@ResponseBody
 	public String allcheck(@RequestParam("loginac")String loginac,@RequestParam("loginpwd")String loginpwd) {
 		return loginServiceImpl.loginCheck(loginac, loginpwd);
 	}
-	
+//	登录时判读是否被ban
 	@RequestMapping(value="/banTime",method=RequestMethod.GET)
 	public ModelAndView ban(@RequestParam("time")String time){
 		 ModelAndView mv=new ModelAndView();

@@ -15,7 +15,7 @@ import com.ls.utils.CommonUtil;
 public class LoadExperienceController {
 	@Autowired
 	private LoadExperienceServiceImpl loadExperienceServiceImpl;
-
+//	返回首页经验分享
 	@RequestMapping("/loadExp")
 	@ResponseBody
 	public String loadExp(){
